@@ -12,7 +12,6 @@ namespace MiniProyecto_SPAF_Apache.Servicios.Logica
 
         public IReadOnlyList<Lote> Historial => _historial.AsReadOnly();
 
-
         public Lote Procesar(string texto, Func<Paquete, decimal> calcularTotal)
         {
             ArgumentNullException.ThrowIfNull(texto);
@@ -26,17 +25,17 @@ namespace MiniProyecto_SPAF_Apache.Servicios.Logica
             decimal totalLote = 0;
 
             if (texto.Length == 0)
-                Agregar(ref errores, ref cantidadErrores, new ErrorValidacion(1, texto, "La línea está vacía."));
+                Agregar(ref errores, ref cantidadErrores, new ErrorValidacion(1, texto, CodigoErrorValidacion.LineaVacia));
 
             using var lector = new StringReader(texto);
             while (lector.ReadLine() is string linea)
             {
                 numeroLinea++;
                 string[] campos = linea.Split(';', StringSplitOptions.TrimEntries);
-                string? motivo = Validar(campos, out decimal peso, out decimal valor);
-                if (motivo != null)
+                CodigoErrorValidacion? codigoError = Validar(campos, out decimal peso, out decimal valor);
+                if (codigoError is CodigoErrorValidacion error)
                 {
-                    Agregar(ref errores, ref cantidadErrores, new ErrorValidacion(numeroLinea, linea, motivo));
+                    Agregar(ref errores, ref cantidadErrores, new ErrorValidacion(numeroLinea, linea, error));
                     continue;
                 }
 
@@ -50,7 +49,7 @@ namespace MiniProyecto_SPAF_Apache.Servicios.Logica
                 catch (ArithmeticException)
                 {
                     Agregar(ref errores, ref cantidadErrores,
-                        new ErrorValidacion(numeroLinea, linea, "El cálculo del flete excede los límites numéricos o es inválido."));
+                        new ErrorValidacion(numeroLinea, linea, CodigoErrorValidacion.CalculoInvalido));
                     continue;
                 }
 
@@ -63,26 +62,26 @@ namespace MiniProyecto_SPAF_Apache.Servicios.Logica
             return lote;
         }
 
-        private static string? Validar(string[] campos, out decimal peso, out decimal valor)
+        private static CodigoErrorValidacion? Validar(string[] campos, out decimal peso, out decimal valor)
         {
             peso = 0;
             valor = 0;
             if (campos.Length == 1 && campos[0].Length == 0)
-                return "La línea está vacía.";
+                return CodigoErrorValidacion.LineaVacia;
             if (campos.Length != 5)
-                return "Se esperaban cinco campos separados por punto y coma.";
+                return CodigoErrorValidacion.CantidadCamposInvalida;
             if (campos[0].Length == 0)
-                return "El código es obligatorio.";
+                return CodigoErrorValidacion.CodigoObligatorio;
             if (!_patronCodigo.IsMatch(campos[0]))
-                return "El código debe tener letras, un guion y dígitos, por ejemplo PACK-001.";
+                return CodigoErrorValidacion.CodigoInvalido;
             if (campos[1].Length == 0)
-                return "El cliente es obligatorio.";
+                return CodigoErrorValidacion.ClienteObligatorio;
             if (campos[2].ToUpperInvariant() is not ("ZONA A" or "ZONA B" or "ZONA C"))
-                return "La zona no es válida.";
+                return CodigoErrorValidacion.ZonaInvalida;
             if (!LeerDecimal(campos[3], out peso) || peso <= 0)
-                return "El peso debe ser un número mayor que cero.";
+                return CodigoErrorValidacion.PesoInvalido;
             if (!LeerDecimal(campos[4], out valor) || valor < 0)
-                return "El valor declarado debe ser un número mayor o igual a cero.";
+                return CodigoErrorValidacion.ValorDeclaradoInvalido;
 
             return null;
         }

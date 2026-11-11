@@ -1,0 +1,34 @@
+{
+  "pantallas": [
+    {
+      "Idioma": "Español",
+      "Errores": {
+        "Desconocido": "Error de validación desconocido.",
+        "LineaVacia": "La línea está vacía.",
+        "CantidadCamposInvalida": "Se esperaban cinco campos separados por punto y coma.",
+        "CodigoObligatorio": "El código es obligatorio.",
+        "CodigoInvalido": "El código debe tener letras, un guion y dígitos, por ejemplo PACK-001.",
+        "ClienteObligatorio": "El cliente es obligatorio.",
+        "ZonaInvalida": "La zona no es válida.",
+        "PesoInvalido": "El peso debe ser un número mayor que cero.",
+        "ValorDeclaradoInvalido": "El valor declarado debe ser un número mayor o igual a cero.",
+        "CalculoInvalido": "El cálculo del flete excede los límites numéricos o es inválido."
+      }
+    },
+    {
+      "Idioma": "English",
+      "Errores": {
+        "Desconocido": "Unknown validation error.",
+        "LineaVacia": "The line is empty.",
+        "CantidadCamposInvalida": "Expected five fields separated by semicolons.",
+        "CodigoObligatorio": "The package code is required.",
+        "CodigoInvalido": "The package code must contain letters, a hyphen and digits, for example PACK-001.",
+        "ClienteObligatorio": "The customer name is required.",
+        "ZonaInvalida": "The zone is invalid.",
+        "PesoInvalido": "Weight must be a number greater than zero.",
+        "ValorDeclaradoInvalido": "Declared value must be a number greater than or equal to zero.",
+        "CalculoInvalido": "The shipping calculation exceeds numeric limits or is invalid."
+      }
+    }
+  ]
+}
