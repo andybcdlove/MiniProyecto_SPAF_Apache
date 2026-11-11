@@ -1,0 +1,14 @@
+# Temporales de Visual Studio
+.vs/
+*.user
+*.suo
+
+# Archivos de compilación
+[Bb]in/
+[Oo]bj/
+
+# Bases de datos locales de prueba
+*.db
+*.db-shm
+*.db-wal
+*.db-journal
