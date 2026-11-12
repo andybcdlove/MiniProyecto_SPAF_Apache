@@ -31,7 +31,7 @@ CSV incluye una fila por paquete y doce encabezados; usa UTF-8 con BOM, comas, p
 
 ### Exportación Excel con formato
 
-El botón Exportar permite elegir Excel (*.xlsx) o CSV (*.csv). Excel es la opción inicial y se genera mediante ExportadorExcel y ClosedXML 0.105.1, sin necesitar Excel instalado. Incluye título amarillo, encabezados en vino, tabla con filtros, filas alternadas, encabezados fijos, anchos definidos, formato monetario y total del lote. Los valores proceden del procesamiento original; no se recalculan al exportar. El CSV obligatorio conserva sus comas y encabezados; no admite estilos. Si Excel abre el CSV en una sola columna, importarlo desde Datos con delimitador coma o usar la nueva opción .xlsx.
+El botón Exportar permite elegir Excel (*.xlsx) o CSV (*.csv). Excel es la opción inicial y se genera mediante ExportadorExcel y ClosedXML 0.105.1, sin necesitar Excel instalado. Incluye título y encabezados en azul claro, bordes azules y tabla con filtros, filas alternadas, encabezados fijos, anchos definidos, formato monetario y total del lote. Los valores proceden del procesamiento original; no se recalculan al exportar. El CSV obligatorio conserva sus comas y encabezados; no admite estilos. Si Excel abre el CSV en una sola columna, importarlo desde Datos con delimitador coma o usar la nueva opción .xlsx.
 
 Prueba adicional: `dotnet run --project PruebasPersistencia -- excel .pruebas/excel-nueva`. Reabre el archivo, compara texto e importes, comprueba tabla, filtros y formato y valida la estructura mediante OpenXmlValidator. Referencia de la biblioteca: https://docs.closedxml.io/en/latest/features/tables.html
 

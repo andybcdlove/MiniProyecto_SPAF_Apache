@@ -19,6 +19,6 @@ PACK-003;Error;Zona B;-1;50
 8. Comprobar que existe `%LOCALAPPDATA%\MiniProyecto_SPAF_Apache\envios.db`.
 9. En historial, seleccionar el lote y abrir Recepciones. Elegir un paquete, indicar quién lo recibe y registrar. Debe mostrarse en la tabla. Intentar repetir el mismo paquete debe informar el error sin cerrar el programa.
 10. Cerrar y volver a abrir el programa; comprobar que la recepción sigue en el mismo lote y los importes permanecen iguales.
-11. Procesar y elegir Exportar → Excel (*.xlsx). Abrir el archivo: cada dato debe quedar en su columna, con título amarillo, encabezados vino, filtros y monedas. Elegir luego CSV (*.csv) y comprobar que aún exporta el formato exigido por la consigna.
+11. Procesar y elegir Exportar → Excel (*.xlsx). Abrir el archivo: cada dato debe quedar en su columna, con encabezados azul claro, bordes azules, filtros y monedas. Elegir luego CSV (*.csv) y comprobar que aún exporta el formato exigido por la consigna.
 
 Registrar nombre del evaluador, fecha, versión de Windows, nombre del ZIP y resultado de cada paso. Para un problema, anotar el mensaje exacto. No marcar como aprobada esta prueba hasta realizarla.

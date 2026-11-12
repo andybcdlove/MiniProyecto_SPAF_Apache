@@ -83,7 +83,7 @@ public partial class FrmPrincipal
         IntegracionPersistencia.Ejecutar(this, Ingles, () =>
         {
             if (_loteActual == null) return;
-            sfdExportar.Filter = "Excel (*.xlsx)|*.xlsx|CSV (*.csv)|*.csv";
+            sfdExportar.Filter = "Excel - tabla con formato (*.xlsx)|*.xlsx|CSV - texto sin formato (*.csv)|*.csv";
             sfdExportar.FilterIndex = 1;
             sfdExportar.FileName = "ReporteEnvios";
             sfdExportar.DefaultExt = "xlsx";
@@ -96,7 +96,12 @@ public partial class FrmPrincipal
             else if (extension.Equals(".csv", StringComparison.OrdinalIgnoreCase))
                 new ExportadorCSV().Exportar(_loteActual, sfdExportar.FileName);
             else throw new ArgumentException(Ingles ? "Choose an .xlsx or .csv file." : "Elige un archivo .xlsx o .csv.");
-            MessageBox.Show(this, Ingles ? "Report exported." : "Reporte exportado.");
+            bool esExcel = extension.Equals(".xlsx", StringComparison.OrdinalIgnoreCase);
+            string mensaje = esExcel
+                ? (Ingles ? "Formatted Excel report exported." : "Reporte de Excel con formato exportado.")
+                : (Ingles ? "CSV exported. Choose Excel (.xlsx) for a formatted table."
+                    : "CSV exportado. Para obtener una tabla con colores y bordes, elige Excel (.xlsx).");
+            MessageBox.Show(this, mensaje);
         });
 
     private void MostrarResumen()
