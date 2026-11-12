@@ -9,6 +9,67 @@ namespace MiniProyecto_SPAF_Apache.Servicios.Logica
             Paquete paquete,
             ConfiguracionTarifas configuracion)
         {
+            //comprueba que existan el paquete y las tarifas
+            if (paquete == null)
+            {
+                throw new ArgumentNullException(
+                    nameof(paquete),
+                    "No se recibió un paquete para calcular."
+                );
+            }
+
+            if (configuracion == null)
+            {
+                throw new ArgumentNullException(
+                    nameof(configuracion),
+                    "No se recibieron las tarifas."
+                );
+            }
+
+            //valida los datos necesarios para el calculo
+            if (paquete.Peso <= 0)
+            {
+                throw new ArgumentException(
+                    "El peso debe ser mayor que cero."
+                );
+            }
+
+            if (paquete.ValorDeclarado < 0)
+            {
+                throw new ArgumentException(
+                    "El valor declarado no puede ser negativo."
+                );
+            }
+
+            if (string.IsNullOrWhiteSpace(paquete.Zona))
+            {
+                throw new ArgumentException(
+                    "La zona es obligatoria."
+                );
+            }
+
+            //valida las tarifas recibidas
+            if (configuracion.PrecioBasePorKilogramo <= 0)
+            {
+                throw new ArgumentException(
+                    "El precio por kilogramo debe ser mayor que cero."
+                );
+            }
+
+            if (configuracion.TasaIva < 0 || configuracion.TasaIva > 1)
+            {
+                throw new ArgumentException(
+                    "La tasa de IVA debe estar entre 0 y 1."
+                );
+            }
+
+            if (configuracion.CostoFijoEnvio < 0)
+            {
+                throw new ArgumentException(
+                    "El costo fijo de envío no puede ser negativo."
+                );
+            }
+
             //calcula el costo por peso
             paquete.SubtotalPeso =
                 paquete.Peso * configuracion.PrecioBasePorKilogramo;
