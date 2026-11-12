@@ -1,0 +1,19 @@
+MiniProyecto_SPAF_Apache - Instalación portable
+
+1. Use Windows x64. Descomprima todo el ZIP en una carpeta local.
+2. Mantenga juntos el EXE, las DLL, appsettings.json y la carpeta Recursos.
+3. Ejecute MiniProyecto_SPAF_Apache.exe. La publicación autocontenida incluye .NET.
+4. La base de datos se crea al inicializar el repositorio en:
+   %LOCALAPPDATA%\MiniProyecto_SPAF_Apache\envios.db
+5. Los reportes CSV se guardan en la ubicación elegida al exportar.
+6. Para respaldar el historial, cierre el programa y copie la carpeta de datos.
+   Para restaurar, cierre el programa y reponga la copia en la misma ubicación.
+7. Para retirar el programa, elimine su carpeta de instalación. Conserve la
+   carpeta de datos si desea mantener el historial.
+
+Si faltan archivos, vuelva a extraer el ZIP completo. Ante errores de escritura,
+elija una carpeta con permisos. No borre envios.db para resolver un error sin
+respaldarla antes.
+
+Nota de desarrollo: los botones ya están conectados. Antes de entregar, realizar
+la prueba en otra computadora indicada en Verificacion-otra-computadora.md.
