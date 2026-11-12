@@ -7,10 +7,34 @@ namespace MiniProyecto_SPAF_Apache.Dominio
         private readonly string _motivo;
         private readonly CodigoErrorValidacion _codigo;
 
-        public int NumeroLinea => _numeroLinea;
-        public string TextoOriginal => _textoOriginal;
-        public string Motivo => _motivo;
-        public CodigoErrorValidacion Codigo => _codigo;
+        public int NumeroLinea
+        {
+            get
+            {
+                return _numeroLinea;
+            }
+        }
+        public string TextoOriginal
+        {
+            get
+            {
+                return _textoOriginal;
+            }
+        }
+        public string Motivo
+        {
+            get
+            {
+                return _motivo;
+            }
+        }
+        public CodigoErrorValidacion Codigo
+        {
+            get
+            {
+                return _codigo;
+            }
+        }
 
         public ErrorValidacion(int numeroLinea, string textoOriginal, string motivo)
             : this(numeroLinea, textoOriginal, CodigoErrorValidacion.Desconocido, motivo)
@@ -30,18 +54,31 @@ namespace MiniProyecto_SPAF_Apache.Dominio
             _motivo = motivo;
         }
 
-        private static string ObtenerMotivo(CodigoErrorValidacion codigo) => codigo switch
+        private static string ObtenerMotivo(CodigoErrorValidacion codigo)
         {
-            CodigoErrorValidacion.LineaVacia => "La línea está vacía.",
-            CodigoErrorValidacion.CantidadCamposInvalida => "Se esperaban cinco campos separados por punto y coma.",
-            CodigoErrorValidacion.CodigoObligatorio => "El código es obligatorio.",
-            CodigoErrorValidacion.CodigoInvalido => "El código debe tener letras, un guion y dígitos, por ejemplo PACK-001.",
-            CodigoErrorValidacion.ClienteObligatorio => "El cliente es obligatorio.",
-            CodigoErrorValidacion.ZonaInvalida => "La zona no es válida.",
-            CodigoErrorValidacion.PesoInvalido => "El peso debe ser un número mayor que cero.",
-            CodigoErrorValidacion.ValorDeclaradoInvalido => "El valor declarado debe ser un número mayor o igual a cero.",
-            CodigoErrorValidacion.CalculoInvalido => "El cálculo del flete excede los límites numéricos o es inválido.",
-            _ => "Error de validación desconocido."
-        };
+            switch (codigo)
+            {
+                case CodigoErrorValidacion.LineaVacia:
+                    return "La línea está vacía.";
+                case CodigoErrorValidacion.CantidadCamposInvalida:
+                    return "Se esperaban cinco campos separados por punto y coma.";
+                case CodigoErrorValidacion.CodigoObligatorio:
+                    return "El código es obligatorio.";
+                case CodigoErrorValidacion.CodigoInvalido:
+                    return "El código debe tener letras, un guion y dígitos, por ejemplo PACK-001.";
+                case CodigoErrorValidacion.ClienteObligatorio:
+                    return "El cliente es obligatorio.";
+                case CodigoErrorValidacion.ZonaInvalida:
+                    return "La zona no es válida.";
+                case CodigoErrorValidacion.PesoInvalido:
+                    return "El peso debe ser un número mayor que cero.";
+                case CodigoErrorValidacion.ValorDeclaradoInvalido:
+                    return "El valor declarado debe ser un número mayor o igual a cero.";
+                case CodigoErrorValidacion.CalculoInvalido:
+                    return "El cálculo del flete excede los límites numéricos o es inválido.";
+                default:
+                    return "Error de validación desconocido.";
+            }
+        }
     }
 }

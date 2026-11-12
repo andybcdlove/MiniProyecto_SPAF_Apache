@@ -15,18 +15,118 @@ namespace MiniProyecto_SPAF_Apache.Dominio
         private decimal _iva;
         private decimal _total;
 
-        public string Codigo => _codigo;
-        public string Cliente => _cliente;
-        public string Zona => _zona;
-        public decimal Peso => _peso;
-        public decimal ValorDeclarado => _valorDeclarado;
-        public decimal SubtotalPeso { get => _subtotalPeso; set => _subtotalPeso = value; }
-        public decimal RecargoZona { get => _recargoZona; set => _recargoZona = value; }
-        public decimal PenalizacionPeso { get => _penalizacionPeso; set => _penalizacionPeso = value; }
-        public decimal Seguro { get => _seguro; set => _seguro = value; }
-        public decimal CostoFijo { get => _costoFijo; set => _costoFijo = value; }
-        public decimal Iva { get => _iva; set => _iva = value; }
-        public decimal Total { get => _total; set => _total = value; }
+        public string Codigo
+        {
+            get
+            {
+                return _codigo;
+            }
+        }
+        public string Cliente
+        {
+            get
+            {
+                return _cliente;
+            }
+        }
+        public string Zona
+        {
+            get
+            {
+                return _zona;
+            }
+        }
+        public decimal Peso
+        {
+            get
+            {
+                return _peso;
+            }
+        }
+        public decimal ValorDeclarado
+        {
+            get
+            {
+                return _valorDeclarado;
+            }
+        }
+        public decimal SubtotalPeso
+        {
+            get
+            {
+                return _subtotalPeso;
+            }
+            set
+            {
+                _subtotalPeso = value;
+            }
+        }
+        public decimal RecargoZona
+        {
+            get
+            {
+                return _recargoZona;
+            }
+            set
+            {
+                _recargoZona = value;
+            }
+        }
+        public decimal PenalizacionPeso
+        {
+            get
+            {
+                return _penalizacionPeso;
+            }
+            set
+            {
+                _penalizacionPeso = value;
+            }
+        }
+        public decimal Seguro
+        {
+            get
+            {
+                return _seguro;
+            }
+            set
+            {
+                _seguro = value;
+            }
+        }
+        public decimal CostoFijo
+        {
+            get
+            {
+                return _costoFijo;
+            }
+            set
+            {
+                _costoFijo = value;
+            }
+        }
+        public decimal Iva
+        {
+            get
+            {
+                return _iva;
+            }
+            set
+            {
+                _iva = value;
+            }
+        }
+        public decimal Total
+        {
+            get
+            {
+                return _total;
+            }
+            set
+            {
+                _total = value;
+            }
+        }
 
         public Paquete(string codigo, string cliente, string zona, decimal peso, decimal valorDeclarado)
         {

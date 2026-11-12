@@ -8,13 +8,55 @@ namespace MiniProyecto_SPAF_Apache.Dominio
         private readonly decimal _total;
         private readonly long? _id;
 
-        public IReadOnlyList<Paquete> Paquetes => _paquetes;
-        public IReadOnlyList<ErrorValidacion> Errores => _errores;
-        public DateTime FechaProcesamiento => _fechaProcesamiento;
-        public int CantidadValidos => _paquetes.Count;
-        public int CantidadInvalidos => _errores.Count;
-        public long? Id => _id;
-        public decimal Total => _total;
+        public IReadOnlyList<Paquete> Paquetes
+        {
+            get
+            {
+                return _paquetes;
+            }
+        }
+        public IReadOnlyList<ErrorValidacion> Errores
+        {
+            get
+            {
+                return _errores;
+            }
+        }
+        public DateTime FechaProcesamiento
+        {
+            get
+            {
+                return _fechaProcesamiento;
+            }
+        }
+        public int CantidadValidos
+        {
+            get
+            {
+                return _paquetes.Count;
+            }
+        }
+        public int CantidadInvalidos
+        {
+            get
+            {
+                return _errores.Count;
+            }
+        }
+        public long? Id
+        {
+            get
+            {
+                return _id;
+            }
+        }
+        public decimal Total
+        {
+            get
+            {
+                return _total;
+            }
+        }
 
         internal Lote(Paquete[] paquetes, ErrorValidacion[] errores, decimal total)
             : this(paquetes, errores, total, DateTime.Now, null)
