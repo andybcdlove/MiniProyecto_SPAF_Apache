@@ -8,6 +8,8 @@
 [Oo]bj/
 
 # Bases de datos locales de prueba
+.pruebas/
+artifacts/
 *.db
 *.db-shm
 *.db-wal

@@ -14,6 +14,12 @@ namespace MiniProyecto_SPAF_Apache.Principal
         {
             InitializeComponent();
             cbIdioma.SelectedIndex = 0;
+            ConectarPersistencia();
+        }
+
+        public FrmHistorial(Servicios.Persistencia.RepositorioEnvios repositorio) : this()
+        {
+            _repositorio = repositorio;
         }
 
         private void bCerrar_Click(object sender, EventArgs e)

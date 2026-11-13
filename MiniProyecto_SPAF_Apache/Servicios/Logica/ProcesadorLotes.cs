@@ -6,109 +6,188 @@ namespace MiniProyecto_SPAF_Apache.Servicios.Logica
 {
     public class ProcesadorLotes
     {
-        private static readonly Regex _patronCodigo = new(
+        private static readonly Regex _patronCodigo = new Regex(
             @"\A[A-Z]+-[0-9]+\z", RegexOptions.IgnoreCase | RegexOptions.CultureInvariant);
-        private readonly List<Lote> _historial = new();
+        private readonly List<Lote> _historial = new List<Lote>();
 
-        public IReadOnlyList<Lote> Historial => _historial.AsReadOnly();
+        public IReadOnlyList<Lote> Historial
+        {
+            get
+            {
+                return _historial.AsReadOnly();
+            }
+        }
 
         public Lote Procesar(string texto, Func<Paquete, decimal> calcularTotal)
         {
             ArgumentNullException.ThrowIfNull(texto);
             ArgumentNullException.ThrowIfNull(calcularTotal);
 
-            var paquetes = new Paquete[5];
-            var errores = new ErrorValidacion[5];
+            Paquete[] paquetes = new Paquete[5];
+            ErrorValidacion[] errores = new ErrorValidacion[5];
             int cantidadPaquetes = 0;
             int cantidadErrores = 0;
             int numeroLinea = 0;
             decimal totalLote = 0;
 
             if (texto.Length == 0)
-                Agregar(ref errores, ref cantidadErrores, new ErrorValidacion(1, texto, CodigoErrorValidacion.LineaVacia));
-
-            using var lector = new StringReader(texto);
-            while (lector.ReadLine() is string linea)
             {
-                numeroLinea++;
-                string[] campos = linea.Split(';', StringSplitOptions.TrimEntries);
-                CodigoErrorValidacion? codigoError = Validar(campos, out decimal peso, out decimal valor);
-                if (codigoError is CodigoErrorValidacion error)
-                {
-                    Agregar(ref errores, ref cantidadErrores, new ErrorValidacion(numeroLinea, linea, error));
-                    continue;
-                }
+                AgregarError(ref errores, ref cantidadErrores, 1, texto, CodigoErrorValidacion.LineaVacia);
+            }
 
-                var paquete = new Paquete(campos[0].ToUpperInvariant(), campos[1],
-                    campos[2].ToUpperInvariant(), peso, valor);
-                try
+            using (StringReader lector = new StringReader(texto))
+            {
+                string? linea;
+                while ((linea = lector.ReadLine()) != null)
                 {
-                    paquete.Total = calcularTotal(paquete);
-                    totalLote += paquete.Total;
-                }
-                catch (ArithmeticException)
-                {
-                    Agregar(ref errores, ref cantidadErrores,
-                        new ErrorValidacion(numeroLinea, linea, CodigoErrorValidacion.CalculoInvalido));
-                    continue;
-                }
+                    numeroLinea++;
+                    string[] campos = linea.Split(';');
+                    for (int i = 0; i < campos.Length; i++)
+                    {
+                        campos[i] = campos[i].Trim();
+                    }
 
-                Agregar(ref paquetes, ref cantidadPaquetes, paquete);
+                    decimal peso;
+                    decimal valor;
+                    CodigoErrorValidacion? codigoError = ValidarCampos(campos, out peso, out valor);
+                    if (codigoError.HasValue)
+                    {
+                        AgregarError(ref errores, ref cantidadErrores, numeroLinea, linea, codigoError.Value);
+                        continue;
+                    }
+
+                    Paquete paquete = new Paquete(campos[0].ToUpperInvariant(), campos[1],
+                        campos[2].ToUpperInvariant(), peso, valor);
+                    try
+                    {
+                        paquete.Total = calcularTotal(paquete);
+                        totalLote += paquete.Total;
+                    }
+                    catch (ArithmeticException)
+                    {
+                        AgregarError(ref errores, ref cantidadErrores, numeroLinea, linea,
+                            CodigoErrorValidacion.CalculoInvalido);
+                        continue;
+                    }
+
+                    AgregarPaquete(ref paquetes, ref cantidadPaquetes, paquete);
+                }
             }
 
             OrdenarPorTotal(paquetes, cantidadPaquetes);
-            var lote = new Lote(paquetes[..cantidadPaquetes], errores[..cantidadErrores], totalLote);
+
+            // El lote solo conserva las posiciones ocupadas.
+            Paquete[] paquetesDelLote = CopiarPaquetes(paquetes, cantidadPaquetes, cantidadPaquetes);
+            ErrorValidacion[] erroresDelLote = CopiarErrores(errores, cantidadErrores, cantidadErrores);
+            Lote lote = new Lote(paquetesDelLote, erroresDelLote, totalLote);
             _historial.Add(lote);
             return lote;
         }
 
-        private static CodigoErrorValidacion? Validar(string[] campos, out decimal peso, out decimal valor)
+        private static CodigoErrorValidacion? ValidarCampos(string[] campos, out decimal peso, out decimal valor)
         {
             peso = 0;
             valor = 0;
+
             if (campos.Length == 1 && campos[0].Length == 0)
+            {
                 return CodigoErrorValidacion.LineaVacia;
+            }
+
             if (campos.Length != 5)
+            {
                 return CodigoErrorValidacion.CantidadCamposInvalida;
+            }
+
             if (campos[0].Length == 0)
+            {
                 return CodigoErrorValidacion.CodigoObligatorio;
+            }
+
             if (!_patronCodigo.IsMatch(campos[0]))
+            {
                 return CodigoErrorValidacion.CodigoInvalido;
+            }
+
             if (campos[1].Length == 0)
+            {
                 return CodigoErrorValidacion.ClienteObligatorio;
-            if (campos[2].ToUpperInvariant() is not ("ZONA A" or "ZONA B" or "ZONA C"))
+            }
+
+            string zona = campos[2].ToUpperInvariant();
+            if (zona != "ZONA A" && zona != "ZONA B" && zona != "ZONA C")
+            {
                 return CodigoErrorValidacion.ZonaInvalida;
+            }
+
             if (!LeerDecimal(campos[3], out peso) || peso <= 0)
+            {
                 return CodigoErrorValidacion.PesoInvalido;
+            }
+
             if (!LeerDecimal(campos[4], out valor) || valor < 0)
+            {
                 return CodigoErrorValidacion.ValorDeclaradoInvalido;
+            }
 
             return null;
         }
 
         private static bool LeerDecimal(string texto, out decimal numero)
         {
+            string textoNormalizado = texto.Replace(',', '.');
             const NumberStyles estilo = NumberStyles.AllowLeadingSign | NumberStyles.AllowDecimalPoint;
-            return decimal.TryParse(texto.Replace(',', '.'), estilo, CultureInfo.InvariantCulture, out numero);
+            return decimal.TryParse(textoNormalizado, estilo, CultureInfo.InvariantCulture, out numero);
         }
 
-        private static void Agregar<T>(ref T[] arreglo, ref int cantidad, T elemento)
+        private static void AgregarPaquete(ref Paquete[] paquetes, ref int cantidad, Paquete paquete)
         {
-            if (cantidad == arreglo.Length)
+            if (cantidad == paquetes.Length)
             {
-                var ampliado = new T[arreglo.Length * 2];
-                for (int i = 0; i < cantidad; i++)
-                    ampliado[i] = arreglo[i];
-
-                arreglo = ampliado;
+                paquetes = CopiarPaquetes(paquetes, cantidad, paquetes.Length * 2);
             }
 
-            arreglo[cantidad] = elemento;
+            paquetes[cantidad] = paquete;
             cantidad++;
+        }
+
+        private static void AgregarError(ref ErrorValidacion[] errores, ref int cantidad,
+            int numeroLinea, string textoOriginal, CodigoErrorValidacion codigo)
+        {
+            if (cantidad == errores.Length)
+            {
+                errores = CopiarErrores(errores, cantidad, errores.Length * 2);
+            }
+
+            errores[cantidad] = new ErrorValidacion(numeroLinea, textoOriginal, codigo);
+            cantidad++;
+        }
+
+        private static Paquete[] CopiarPaquetes(Paquete[] origen, int cantidad, int capacidad)
+        {
+            Paquete[] copia = new Paquete[capacidad];
+            for (int i = 0; i < cantidad; i++)
+            {
+                copia[i] = origen[i];
+            }
+
+            return copia;
+        }
+
+        private static ErrorValidacion[] CopiarErrores(ErrorValidacion[] origen, int cantidad, int capacidad)
+        {
+            ErrorValidacion[] copia = new ErrorValidacion[capacidad];
+            for (int i = 0; i < cantidad; i++)
+            {
+                copia[i] = origen[i];
+            }
+
+            return copia;
         }
 
         private static void OrdenarPorTotal(Paquete[] paquetes, int cantidad)
         {
+            // Inserta cada paquete en la parte que ya está ordenada.
             for (int i = 1; i < cantidad; i++)
             {
                 Paquete actual = paquetes[i];
