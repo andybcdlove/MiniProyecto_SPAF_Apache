@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             lTitulo = new Label();
             lIdioma = new Label();
             cbIdioma = new ComboBox();
@@ -41,12 +42,6 @@
             lInstruccion = new Label();
             gbResultados = new GroupBox();
             dgvPaquetes = new DataGridView();
-            cCodigo = new DataGridViewTextBoxColumn();
-            cCliente = new DataGridViewTextBoxColumn();
-            cZona = new DataGridViewTextBoxColumn();
-            cPeso = new DataGridViewTextBoxColumn();
-            cValorDeclarado = new DataGridViewTextBoxColumn();
-            cTotal = new DataGridViewTextBoxColumn();
             gbDetalle = new GroupBox();
             label1 = new Label();
             lTotalPaquete = new Label();
@@ -74,6 +69,12 @@
             bExportar = new Button();
             bHistorial = new Button();
             sfdExportar = new SaveFileDialog();
+            cCodigo = new DataGridViewTextBoxColumn();
+            cCliente = new DataGridViewTextBoxColumn();
+            cZona = new DataGridViewTextBoxColumn();
+            cPeso = new DataGridViewTextBoxColumn();
+            cValorDeclarado = new DataGridViewTextBoxColumn();
+            cTotal = new DataGridViewTextBoxColumn();
             gbCaptura.SuspendLayout();
             gbResultados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvPaquetes).BeginInit();
@@ -84,38 +85,29 @@
             // 
             // lTitulo
             // 
+            resources.ApplyResources(lTitulo, "lTitulo");
             lTitulo.BackColor = Color.Gold;
-            lTitulo.Font = new Font("Century Gothic", 21.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
             lTitulo.ForeColor = Color.Crimson;
-            lTitulo.Location = new Point(3, 9);
             lTitulo.Name = "lTitulo";
-            lTitulo.Size = new Size(1154, 52);
-            lTitulo.TabIndex = 0;
-            lTitulo.Text = "Paqueteria";
-            lTitulo.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // lIdioma
             // 
+            resources.ApplyResources(lIdioma, "lIdioma");
             lIdioma.BackColor = Color.Gold;
-            lIdioma.Location = new Point(938, 9);
             lIdioma.Name = "lIdioma";
-            lIdioma.Size = new Size(74, 52);
-            lIdioma.TabIndex = 1;
-            lIdioma.Text = "Idioma";
-            lIdioma.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // cbIdioma
             // 
+            resources.ApplyResources(cbIdioma, "cbIdioma");
             cbIdioma.DropDownStyle = ComboBoxStyle.DropDownList;
             cbIdioma.FormattingEnabled = true;
-            cbIdioma.Items.AddRange(new object[] { "Español", "Inglés" });
-            cbIdioma.Location = new Point(1018, 22);
+            cbIdioma.Items.AddRange(new object[] { resources.GetString("cbIdioma.Items"), resources.GetString("cbIdioma.Items1") });
             cbIdioma.Name = "cbIdioma";
-            cbIdioma.Size = new Size(121, 29);
-            cbIdioma.TabIndex = 2;
+            cbIdioma.SelectedIndexChanged += cbIdioma_SelectedIndexChanged;
             // 
             // gbCaptura
             // 
+            resources.ApplyResources(gbCaptura, "gbCaptura");
             gbCaptura.BackColor = Color.Cornsilk;
             gbCaptura.Controls.Add(lFormato);
             gbCaptura.Controls.Add(bLimpiar);
@@ -123,146 +115,79 @@
             gbCaptura.Controls.Add(tLote);
             gbCaptura.Controls.Add(lInstruccion);
             gbCaptura.FlatStyle = FlatStyle.Popup;
-            gbCaptura.Font = new Font("Century Gothic", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            gbCaptura.Location = new Point(12, 78);
             gbCaptura.Name = "gbCaptura";
-            gbCaptura.Size = new Size(879, 258);
-            gbCaptura.TabIndex = 3;
             gbCaptura.TabStop = false;
-            gbCaptura.Text = "Captura de paquetes";
             // 
             // lFormato
             // 
-            lFormato.AutoSize = true;
+            resources.ApplyResources(lFormato, "lFormato");
             lFormato.BackColor = Color.AntiqueWhite;
-            lFormato.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lFormato.Location = new Point(267, 35);
             lFormato.Name = "lFormato";
-            lFormato.Size = new Size(340, 21);
-            lFormato.TabIndex = 13;
-            lFormato.Text = "Código;Cliente;Zona;Peso;Valor declarado";
             // 
             // bLimpiar
             // 
+            resources.ApplyResources(bLimpiar, "bLimpiar");
             bLimpiar.BackColor = Color.Gold;
-            bLimpiar.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             bLimpiar.ForeColor = Color.Crimson;
-            bLimpiar.Location = new Point(770, 203);
             bLimpiar.Name = "bLimpiar";
-            bLimpiar.Size = new Size(87, 29);
-            bLimpiar.TabIndex = 12;
-            bLimpiar.Text = "Limpiar";
             bLimpiar.UseVisualStyleBackColor = false;
             // 
             // bProcesar
             // 
+            resources.ApplyResources(bProcesar, "bProcesar");
             bProcesar.BackColor = Color.Gold;
-            bProcesar.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             bProcesar.ForeColor = Color.Crimson;
-            bProcesar.Location = new Point(15, 203);
             bProcesar.Name = "bProcesar";
-            bProcesar.Size = new Size(134, 29);
-            bProcesar.TabIndex = 11;
-            bProcesar.Text = "Procesar Lote";
             bProcesar.UseVisualStyleBackColor = false;
             // 
             // tLote
             // 
             tLote.AcceptsReturn = true;
-            tLote.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tLote.Location = new Point(15, 69);
-            tLote.Multiline = true;
+            resources.ApplyResources(tLote, "tLote");
             tLote.Name = "tLote";
-            tLote.ScrollBars = ScrollBars.Vertical;
-            tLote.Size = new Size(842, 112);
-            tLote.TabIndex = 3;
             // 
             // lInstruccion
             // 
-            lInstruccion.AutoSize = true;
-            lInstruccion.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lInstruccion.Location = new Point(15, 35);
+            resources.ApplyResources(lInstruccion, "lInstruccion");
             lInstruccion.Name = "lInstruccion";
-            lInstruccion.Size = new Size(237, 21);
-            lInstruccion.TabIndex = 0;
-            lInstruccion.Text = "Escribe un paquete por línea:\r\n";
             // 
             // gbResultados
             // 
+            resources.ApplyResources(gbResultados, "gbResultados");
             gbResultados.BackColor = Color.Cornsilk;
             gbResultados.Controls.Add(dgvPaquetes);
-            gbResultados.Font = new Font("Century Gothic", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            gbResultados.Location = new Point(12, 368);
             gbResultados.Name = "gbResultados";
-            gbResultados.Size = new Size(546, 466);
-            gbResultados.TabIndex = 4;
             gbResultados.TabStop = false;
-            gbResultados.Text = "Paquetes procesados";
             // 
             // dgvPaquetes
             // 
+            resources.ApplyResources(dgvPaquetes, "dgvPaquetes");
             dgvPaquetes.AllowUserToAddRows = false;
             dgvPaquetes.AllowUserToDeleteRows = false;
             dgvPaquetes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvPaquetes.BackgroundColor = Color.Cornsilk;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = Color.Gold;
-            dataGridViewCellStyle1.Font = new Font("Century Gothic", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvPaquetes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dgvPaquetes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvPaquetes.ClipboardCopyMode = DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = Color.Gold;
+            dataGridViewCellStyle3.Font = new Font("Century Gothic", 13F, FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvPaquetes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dgvPaquetes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dgvPaquetes.Columns.AddRange(new DataGridViewColumn[] { cCodigo, cCliente, cZona, cPeso, cValorDeclarado, cTotal });
-            dgvPaquetes.Dock = DockStyle.Fill;
-            dgvPaquetes.Location = new Point(3, 25);
             dgvPaquetes.MultiSelect = false;
             dgvPaquetes.Name = "dgvPaquetes";
             dgvPaquetes.ReadOnly = true;
             dgvPaquetes.RowHeadersVisible = false;
+            dgvPaquetes.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             dgvPaquetes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvPaquetes.Size = new Size(540, 438);
-            dgvPaquetes.TabIndex = 0;
-            // 
-            // cCodigo
-            // 
-            cCodigo.HeaderText = "Código";
-            cCodigo.Name = "cCodigo";
-            cCodigo.ReadOnly = true;
-            // 
-            // cCliente
-            // 
-            cCliente.HeaderText = "Cliente";
-            cCliente.Name = "cCliente";
-            cCliente.ReadOnly = true;
-            // 
-            // cZona
-            // 
-            cZona.HeaderText = "Zona";
-            cZona.Name = "cZona";
-            cZona.ReadOnly = true;
-            // 
-            // cPeso
-            // 
-            cPeso.HeaderText = "Peso";
-            cPeso.Name = "cPeso";
-            cPeso.ReadOnly = true;
-            // 
-            // cValorDeclarado
-            // 
-            cValorDeclarado.HeaderText = "Valor";
-            cValorDeclarado.Name = "cValorDeclarado";
-            cValorDeclarado.ReadOnly = true;
-            // 
-            // cTotal
-            // 
-            cTotal.HeaderText = "Total";
-            cTotal.Name = "cTotal";
-            cTotal.ReadOnly = true;
+            dgvPaquetes.CellContentClick += dgvPaquetes_CellContentClick;
             // 
             // gbDetalle
             // 
+            resources.ApplyResources(gbDetalle, "gbDetalle");
             gbDetalle.BackColor = Color.Cornsilk;
             gbDetalle.Controls.Add(label1);
             gbDetalle.Controls.Add(lTotalPaquete);
@@ -277,278 +202,173 @@
             gbDetalle.Controls.Add(lZona);
             gbDetalle.Controls.Add(lCliente);
             gbDetalle.Controls.Add(lCodigo);
-            gbDetalle.Font = new Font("Century Gothic", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            gbDetalle.Location = new Point(591, 368);
             gbDetalle.Name = "gbDetalle";
-            gbDetalle.Size = new Size(546, 466);
-            gbDetalle.TabIndex = 5;
             gbDetalle.TabStop = false;
-            gbDetalle.Text = "Detalle del paquete";
             // 
             // label1
             // 
+            resources.ApplyResources(label1, "label1");
             label1.BackColor = Color.Gold;
-            label1.Location = new Point(0, 192);
             label1.Name = "label1";
-            label1.Size = new Size(546, 10);
-            label1.TabIndex = 11;
             // 
             // lTotalPaquete
             // 
-            lTotalPaquete.AutoSize = true;
-            lTotalPaquete.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lTotalPaquete.Location = new Point(16, 424);
+            resources.ApplyResources(lTotalPaquete, "lTotalPaquete");
             lTotalPaquete.Name = "lTotalPaquete";
-            lTotalPaquete.Size = new Size(169, 19);
-            lTotalPaquete.TabIndex = 10;
-            lTotalPaquete.Text = "Total del paquete: —";
             // 
             // lIva
             // 
-            lIva.AutoSize = true;
-            lIva.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lIva.Location = new Point(16, 390);
+            resources.ApplyResources(lIva, "lIva");
             lIva.Name = "lIva";
-            lIva.Size = new Size(63, 21);
-            lIva.TabIndex = 9;
-            lIva.Text = "IVA: —";
             // 
             // lCostoFijo
             // 
-            lCostoFijo.AutoSize = true;
-            lCostoFijo.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lCostoFijo.Location = new Point(16, 358);
+            resources.ApplyResources(lCostoFijo, "lCostoFijo");
             lCostoFijo.Name = "lCostoFijo";
-            lCostoFijo.Size = new Size(105, 21);
-            lCostoFijo.TabIndex = 8;
-            lCostoFijo.Text = "\tCosto fijo: —";
             // 
             // lSeguro
             // 
-            lSeguro.AutoSize = true;
-            lSeguro.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lSeguro.Location = new Point(18, 324);
+            resources.ApplyResources(lSeguro, "lSeguro");
             lSeguro.Name = "lSeguro";
-            lSeguro.Size = new Size(88, 21);
-            lSeguro.TabIndex = 7;
-            lSeguro.Text = "Seguro: —";
             // 
             // lRecargoZona
             // 
-            lRecargoZona.AutoSize = true;
-            lRecargoZona.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lRecargoZona.Location = new Point(18, 253);
+            resources.ApplyResources(lRecargoZona, "lRecargoZona");
             lRecargoZona.Name = "lRecargoZona";
-            lRecargoZona.Size = new Size(173, 21);
-            lRecargoZona.TabIndex = 6;
-            lRecargoZona.Text = "Recargo por zona: —";
             // 
             // lSubtotalPeso
             // 
-            lSubtotalPeso.AutoSize = true;
-            lSubtotalPeso.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lSubtotalPeso.Location = new Point(18, 217);
+            resources.ApplyResources(lSubtotalPeso, "lSubtotalPeso");
             lSubtotalPeso.Name = "lSubtotalPeso";
-            lSubtotalPeso.Size = new Size(172, 21);
-            lSubtotalPeso.TabIndex = 5;
-            lSubtotalPeso.Text = "Subtotal por peso: —";
             // 
             // lPenalizacion
             // 
-            lPenalizacion.AutoSize = true;
-            lPenalizacion.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lPenalizacion.Location = new Point(18, 289);
+            resources.ApplyResources(lPenalizacion, "lPenalizacion");
             lPenalizacion.Name = "lPenalizacion";
-            lPenalizacion.Size = new Size(202, 21);
-            lPenalizacion.TabIndex = 5;
-            lPenalizacion.Text = "Penalización por peso: —";
             // 
             // lValorDeclarado
             // 
-            lValorDeclarado.AutoSize = true;
-            lValorDeclarado.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lValorDeclarado.Location = new Point(18, 153);
+            resources.ApplyResources(lValorDeclarado, "lValorDeclarado");
             lValorDeclarado.Name = "lValorDeclarado";
-            lValorDeclarado.Size = new Size(160, 21);
-            lValorDeclarado.TabIndex = 4;
-            lValorDeclarado.Text = "Valor declarado: —";
             // 
             // lPeso
             // 
-            lPeso.AutoSize = true;
-            lPeso.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lPeso.Location = new Point(18, 122);
+            resources.ApplyResources(lPeso, "lPeso");
             lPeso.Name = "lPeso";
-            lPeso.Size = new Size(104, 21);
-            lPeso.TabIndex = 3;
-            lPeso.Text = "Peso (kg): —";
             // 
             // lZona
             // 
-            lZona.AutoSize = true;
-            lZona.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lZona.Location = new Point(18, 89);
+            resources.ApplyResources(lZona, "lZona");
             lZona.Name = "lZona";
-            lZona.Size = new Size(73, 21);
-            lZona.TabIndex = 2;
-            lZona.Text = "Zona: —";
             // 
             // lCliente
             // 
-            lCliente.AutoSize = true;
-            lCliente.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lCliente.Location = new Point(18, 56);
+            resources.ApplyResources(lCliente, "lCliente");
             lCliente.Name = "lCliente";
-            lCliente.Size = new Size(90, 21);
-            lCliente.TabIndex = 1;
-            lCliente.Text = "Cliente: —";
             // 
             // lCodigo
             // 
-            lCodigo.AutoSize = true;
-            lCodigo.Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lCodigo.Location = new Point(18, 25);
+            resources.ApplyResources(lCodigo, "lCodigo");
             lCodigo.Name = "lCodigo";
-            lCodigo.Size = new Size(92, 21);
-            lCodigo.TabIndex = 0;
-            lCodigo.Text = "Código: —";
             // 
             // gbErrores
             // 
+            resources.ApplyResources(gbErrores, "gbErrores");
             gbErrores.BackColor = Color.Cornsilk;
             gbErrores.Controls.Add(dgvErrores);
-            gbErrores.Font = new Font("Century Gothic", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            gbErrores.Location = new Point(12, 890);
             gbErrores.Name = "gbErrores";
-            gbErrores.Size = new Size(879, 249);
-            gbErrores.TabIndex = 6;
             gbErrores.TabStop = false;
-            gbErrores.Text = "Errores del lote";
             // 
             // dgvErrores
             // 
+            resources.ApplyResources(dgvErrores, "dgvErrores");
             dgvErrores.AllowUserToAddRows = false;
             dgvErrores.AllowUserToDeleteRows = false;
             dgvErrores.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvErrores.BackgroundColor = Color.Cornsilk;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Century Gothic", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvErrores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Century Gothic", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgvErrores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvErrores.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvErrores.Columns.AddRange(new DataGridViewColumn[] { cLinea, cTextoOriginal, cMotivo });
-            dgvErrores.Dock = DockStyle.Fill;
-            dgvErrores.Location = new Point(3, 25);
             dgvErrores.MultiSelect = false;
             dgvErrores.Name = "dgvErrores";
             dgvErrores.ReadOnly = true;
             dgvErrores.RowHeadersVisible = false;
             dgvErrores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvErrores.Size = new Size(873, 221);
-            dgvErrores.TabIndex = 0;
             // 
             // cLinea
             // 
             cLinea.FillWeight = 15F;
-            cLinea.HeaderText = "Linea";
+            resources.ApplyResources(cLinea, "cLinea");
             cLinea.Name = "cLinea";
             cLinea.ReadOnly = true;
             // 
             // cTextoOriginal
             // 
             cTextoOriginal.FillWeight = 50F;
-            cTextoOriginal.HeaderText = "Texto Original";
+            resources.ApplyResources(cTextoOriginal, "cTextoOriginal");
             cTextoOriginal.Name = "cTextoOriginal";
             cTextoOriginal.ReadOnly = true;
             // 
             // cMotivo
             // 
             cMotivo.FillWeight = 35F;
-            cMotivo.HeaderText = "Motivo del Error";
+            resources.ApplyResources(cMotivo, "cMotivo");
             cMotivo.Name = "cMotivo";
             cMotivo.ReadOnly = true;
             // 
             // label2
             // 
+            resources.ApplyResources(label2, "label2");
             label2.BackColor = Color.Gold;
-            label2.Location = new Point(15, 1167);
             label2.Name = "label2";
-            label2.Size = new Size(1140, 35);
-            label2.TabIndex = 12;
             // 
             // lValidos
             // 
+            resources.ApplyResources(lValidos, "lValidos");
             lValidos.BackColor = Color.Gold;
-            lValidos.Font = new Font("Century Gothic", 12F);
-            lValidos.Location = new Point(40, 1167);
             lValidos.Name = "lValidos";
-            lValidos.Size = new Size(159, 35);
-            lValidos.TabIndex = 13;
-            lValidos.Text = "Paquetes válidos: 0";
-            lValidos.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lInvalidos
             // 
+            resources.ApplyResources(lInvalidos, "lInvalidos");
             lInvalidos.BackColor = Color.Gold;
-            lInvalidos.Font = new Font("Century Gothic", 12F);
-            lInvalidos.Location = new Point(386, 1167);
             lInvalidos.Name = "lInvalidos";
-            lInvalidos.Size = new Size(172, 35);
-            lInvalidos.TabIndex = 14;
-            lInvalidos.Text = "Paquetes inválidos: 0";
-            lInvalidos.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lTotalLote
             // 
+            resources.ApplyResources(lTotalLote, "lTotalLote");
             lTotalLote.BackColor = Color.Gold;
-            lTotalLote.Font = new Font("Century Gothic", 12F, FontStyle.Bold);
-            lTotalLote.Location = new Point(759, 1167);
             lTotalLote.Name = "lTotalLote";
-            lTotalLote.Size = new Size(159, 35);
-            lTotalLote.TabIndex = 15;
-            lTotalLote.Text = "Total del lote: $0.00";
-            lTotalLote.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // bGuardar
             // 
+            resources.ApplyResources(bGuardar, "bGuardar");
             bGuardar.BackColor = Color.Gold;
-            bGuardar.Enabled = false;
-            bGuardar.Font = new Font("Century Gothic", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
             bGuardar.ForeColor = Color.Crimson;
-            bGuardar.Location = new Point(27, 1249);
             bGuardar.Name = "bGuardar";
-            bGuardar.Size = new Size(134, 37);
-            bGuardar.TabIndex = 16;
-            bGuardar.Text = "Guardar Lote";
             bGuardar.UseVisualStyleBackColor = false;
             // 
             // bExportar
             // 
+            resources.ApplyResources(bExportar, "bExportar");
             bExportar.BackColor = Color.Gold;
-            bExportar.Enabled = false;
-            bExportar.Font = new Font("Century Gothic", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
             bExportar.ForeColor = Color.Crimson;
-            bExportar.Location = new Point(536, 1249);
             bExportar.Name = "bExportar";
-            bExportar.Size = new Size(134, 37);
-            bExportar.TabIndex = 17;
-            bExportar.Text = "Exportar CSV";
             bExportar.UseVisualStyleBackColor = false;
             // 
             // bHistorial
             // 
+            resources.ApplyResources(bHistorial, "bHistorial");
             bHistorial.BackColor = Color.Gold;
-            bHistorial.Font = new Font("Century Gothic", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
             bHistorial.ForeColor = Color.Crimson;
-            bHistorial.Location = new Point(1021, 1249);
             bHistorial.Name = "bHistorial";
-            bHistorial.Size = new Size(134, 37);
-            bHistorial.TabIndex = 18;
-            bHistorial.Text = "Ver Historial";
             bHistorial.UseVisualStyleBackColor = false;
             bHistorial.Click += bHistorial_Click;
             // 
@@ -556,17 +376,49 @@
             // 
             sfdExportar.DefaultExt = "csv";
             sfdExportar.FileName = "ReporteEnvios.csv";
-            sfdExportar.Filter = "Archivos CSV (*.csv)|*.csv";
-            sfdExportar.Title = "Guardar reporte del lote";
+            resources.ApplyResources(sfdExportar, "sfdExportar");
+            // 
+            // cCodigo
+            // 
+            resources.ApplyResources(cCodigo, "cCodigo");
+            cCodigo.Name = "cCodigo";
+            cCodigo.ReadOnly = true;
+            // 
+            // cCliente
+            // 
+            resources.ApplyResources(cCliente, "cCliente");
+            cCliente.Name = "cCliente";
+            cCliente.ReadOnly = true;
+            // 
+            // cZona
+            // 
+            resources.ApplyResources(cZona, "cZona");
+            cZona.Name = "cZona";
+            cZona.ReadOnly = true;
+            // 
+            // cPeso
+            // 
+            resources.ApplyResources(cPeso, "cPeso");
+            cPeso.Name = "cPeso";
+            cPeso.ReadOnly = true;
+            // 
+            // cValorDeclarado
+            // 
+            resources.ApplyResources(cValorDeclarado, "cValorDeclarado");
+            cValorDeclarado.Name = "cValorDeclarado";
+            cValorDeclarado.ReadOnly = true;
+            // 
+            // cTotal
+            // 
+            resources.ApplyResources(cTotal, "cTotal");
+            cTotal.Name = "cTotal";
+            cTotal.ReadOnly = true;
             // 
             // FrmPrincipal
             // 
-            AutoScaleDimensions = new SizeF(10F, 21F);
+            resources.ApplyResources(this, "$this");
             AutoScaleMode = AutoScaleMode.Font;
-            AutoScroll = true;
-            AutoScrollMinSize = new Size(0, 1300);
             BackColor = SystemColors.ControlLightLight;
-            ClientSize = new Size(1184, 861);
             Controls.Add(bHistorial);
             Controls.Add(bExportar);
             Controls.Add(bGuardar);
@@ -581,11 +433,7 @@
             Controls.Add(cbIdioma);
             Controls.Add(lIdioma);
             Controls.Add(lTitulo);
-            Font = new Font("Century Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Margin = new Padding(4);
             Name = "FrmPrincipal";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Procesamiento de envíos";
             gbCaptura.ResumeLayout(false);
             gbCaptura.PerformLayout();
             gbResultados.ResumeLayout(false);
@@ -610,12 +458,6 @@
         private Label lFormato;
         private GroupBox gbResultados;
         private DataGridView dgvPaquetes;
-        private DataGridViewTextBoxColumn cCodigo;
-        private DataGridViewTextBoxColumn cCliente;
-        private DataGridViewTextBoxColumn cZona;
-        private DataGridViewTextBoxColumn cPeso;
-        private DataGridViewTextBoxColumn cValorDeclarado;
-        private DataGridViewTextBoxColumn cTotal;
         private GroupBox gbDetalle;
         private Label lCodigo;
         private Label lTotalPaquete;
@@ -632,9 +474,6 @@
         private Label label1;
         private GroupBox gbErrores;
         private DataGridView dgvErrores;
-        private DataGridViewTextBoxColumn cLinea;
-        private DataGridViewTextBoxColumn cTextoOriginal;
-        private DataGridViewTextBoxColumn cMotivo;
         private Label label2;
         private Label lValidos;
         private Label lInvalidos;
@@ -643,5 +482,14 @@
         private Button bExportar;
         private Button bHistorial;
         private SaveFileDialog sfdExportar;
+        private DataGridViewTextBoxColumn cLinea;
+        private DataGridViewTextBoxColumn cTextoOriginal;
+        private DataGridViewTextBoxColumn cMotivo;
+        private DataGridViewTextBoxColumn cCodigo;
+        private DataGridViewTextBoxColumn cCliente;
+        private DataGridViewTextBoxColumn cZona;
+        private DataGridViewTextBoxColumn cPeso;
+        private DataGridViewTextBoxColumn cValorDeclarado;
+        private DataGridViewTextBoxColumn cTotal;
     }
 }
