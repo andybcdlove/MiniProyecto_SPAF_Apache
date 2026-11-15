@@ -253,23 +253,14 @@
   <data name="cMotivo.HeaderText" xml:space="preserve">
     <value>Error Reason</value>
   </data>
-  <data name="lValidos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 35</value>
-  </data>
   <data name="lValidos.Text" xml:space="preserve">
     <value>Valid Packages: 0</value>
-  </data>
-  <data name="lInvalidos.Size" type="System.Drawing.Size, System.Drawing">
-    <value>258, 35</value>
   </data>
   <data name="lInvalidos.Text" xml:space="preserve">
     <value>Invalid Packages: 0</value>
   </data>
   <data name="lTotalLote.Location" type="System.Drawing.Point, System.Drawing">
     <value>760, 1167</value>
-  </data>
-  <data name="lTotalLote.Size" type="System.Drawing.Size, System.Drawing">
-    <value>197, 35</value>
   </data>
   <data name="lTotalLote.Text" xml:space="preserve">
     <value>Batch Total: $0.00</value>
@@ -301,6 +292,9 @@
   </data>
   <data name="bHistorial.Text" xml:space="preserve">
     <value>View History</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1246, 861</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Courier Service</value>

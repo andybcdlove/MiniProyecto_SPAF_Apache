@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHistorial));
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             cbIdioma = new ComboBox();
             lIdioma = new Label();
             lTitulo = new Label();
@@ -74,65 +74,66 @@
             // 
             // cbIdioma
             // 
-            resources.ApplyResources(cbIdioma, "cbIdioma");
             cbIdioma.DropDownStyle = ComboBoxStyle.DropDownList;
             cbIdioma.FormattingEnabled = true;
             cbIdioma.Items.AddRange(new object[] { resources.GetString("cbIdioma.Items"), resources.GetString("cbIdioma.Items1") });
+            resources.ApplyResources(cbIdioma, "cbIdioma");
             cbIdioma.Name = "cbIdioma";
             cbIdioma.SelectedIndexChanged += cbIdioma_SelectedIndexChanged;
             // 
             // lIdioma
             // 
-            resources.ApplyResources(lIdioma, "lIdioma");
             lIdioma.BackColor = Color.Gold;
+            resources.ApplyResources(lIdioma, "lIdioma");
             lIdioma.Name = "lIdioma";
             // 
             // lTitulo
             // 
-            resources.ApplyResources(lTitulo, "lTitulo");
             lTitulo.BackColor = Color.Gold;
+            resources.ApplyResources(lTitulo, "lTitulo");
             lTitulo.ForeColor = Color.Crimson;
             lTitulo.Name = "lTitulo";
             // 
             // gbLotes
             // 
-            resources.ApplyResources(gbLotes, "gbLotes");
             gbLotes.BackColor = Color.Cornsilk;
             gbLotes.Controls.Add(dataGridView1);
             gbLotes.FlatStyle = FlatStyle.Popup;
+            resources.ApplyResources(gbLotes, "gbLotes");
             gbLotes.Name = "gbLotes";
             gbLotes.TabStop = false;
             // 
             // dataGridView1
             // 
-            resources.ApplyResources(dataGridView1, "dataGridView1");
             dataGridView1.AllowUserToAddRows = false;
             dataGridView1.AllowUserToDeleteRows = false;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.BackgroundColor = Color.Cornsilk;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = SystemColors.Control;
-            dataGridViewCellStyle4.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { cIdLote, cFecha, cCantidad, cTotalLote });
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = SystemColors.Window;
-            dataGridViewCellStyle5.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle5.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Century Gothic", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            resources.ApplyResources(dataGridView1, "dataGridView1");
             dataGridView1.MultiSelect = false;
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersVisible = false;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView1.SelectionChanged += dataGridView1_SelectionChanged;
             // 
             // cIdLote
             // 
@@ -160,34 +161,35 @@
             // 
             // gbPaquetes
             // 
-            resources.ApplyResources(gbPaquetes, "gbPaquetes");
             gbPaquetes.BackColor = Color.Cornsilk;
             gbPaquetes.Controls.Add(dgvPaquetes);
+            resources.ApplyResources(gbPaquetes, "gbPaquetes");
             gbPaquetes.Name = "gbPaquetes";
             gbPaquetes.TabStop = false;
             // 
             // dgvPaquetes
             // 
-            resources.ApplyResources(dgvPaquetes, "dgvPaquetes");
             dgvPaquetes.AllowUserToAddRows = false;
             dgvPaquetes.AllowUserToDeleteRows = false;
             dgvPaquetes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvPaquetes.BackgroundColor = Color.Cornsilk;
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = Color.Gold;
-            dataGridViewCellStyle6.Font = new Font("Century Gothic", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
-            dgvPaquetes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = Color.Gold;
+            dataGridViewCellStyle3.Font = new Font("Century Gothic", 13F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvPaquetes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgvPaquetes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvPaquetes.Columns.AddRange(new DataGridViewColumn[] { cCodigo, cCliente, cZona, cPeso, cValorDeclarado, cTotal });
+            resources.ApplyResources(dgvPaquetes, "dgvPaquetes");
             dgvPaquetes.MultiSelect = false;
             dgvPaquetes.Name = "dgvPaquetes";
             dgvPaquetes.ReadOnly = true;
             dgvPaquetes.RowHeadersVisible = false;
             dgvPaquetes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvPaquetes.SelectionChanged += dgvPaquetes_SelectionChanged;
             // 
             // cCodigo
             // 
@@ -227,7 +229,6 @@
             // 
             // gbDetalle
             // 
-            resources.ApplyResources(gbDetalle, "gbDetalle");
             gbDetalle.BackColor = Color.Cornsilk;
             gbDetalle.Controls.Add(label1);
             gbDetalle.Controls.Add(lTotalPaquete);
@@ -242,13 +243,14 @@
             gbDetalle.Controls.Add(lZona);
             gbDetalle.Controls.Add(lCliente);
             gbDetalle.Controls.Add(lCodigo);
+            resources.ApplyResources(gbDetalle, "gbDetalle");
             gbDetalle.Name = "gbDetalle";
             gbDetalle.TabStop = false;
             // 
             // label1
             // 
-            resources.ApplyResources(label1, "label1");
             label1.BackColor = Color.Gold;
+            resources.ApplyResources(label1, "label1");
             label1.Name = "label1";
             // 
             // lTotalPaquete
@@ -313,16 +315,17 @@
             // 
             // bActualizar
             // 
-            resources.ApplyResources(bActualizar, "bActualizar");
             bActualizar.BackColor = Color.Gold;
+            resources.ApplyResources(bActualizar, "bActualizar");
             bActualizar.ForeColor = Color.Crimson;
             bActualizar.Name = "bActualizar";
             bActualizar.UseVisualStyleBackColor = false;
+            bActualizar.Click += bActualizar_Click;
             // 
             // bCerrar
             // 
-            resources.ApplyResources(bCerrar, "bCerrar");
             bCerrar.BackColor = Color.Gold;
+            resources.ApplyResources(bCerrar, "bCerrar");
             bCerrar.ForeColor = Color.Crimson;
             bCerrar.Name = "bCerrar";
             bCerrar.UseVisualStyleBackColor = false;
