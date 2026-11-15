@@ -18,7 +18,10 @@ public partial class FrmHistorial
         var recepciones = new Button
         {
             Name = "bRecepciones", Text = "Recepciones", AutoSize = true,
-            Location = new Point(bActualizar.Right + 20, bActualizar.Top), Height = bActualizar.Height
+            Location = new Point(bActualizar.Right + 20, bActualizar.Top), Height = bActualizar.Height,
+            BackColor = bActualizar.BackColor, ForeColor = bActualizar.ForeColor,
+            Font = bActualizar.Font, FlatStyle = bActualizar.FlatStyle,
+            UseVisualStyleBackColor = false
         };
         Controls.Add(recepciones);
         recepciones.Click += (_, _) =>
