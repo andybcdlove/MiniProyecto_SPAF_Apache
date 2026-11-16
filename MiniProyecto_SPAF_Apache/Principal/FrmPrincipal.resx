@@ -443,7 +443,7 @@
     <value>3, 30</value>
   </data>
   <data name="dgvPaquetes.Size" type="System.Drawing.Size, System.Drawing">
-    <value>540, 433</value>
+    <value>552, 433</value>
   </data>
   <data name="dgvPaquetes.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -467,7 +467,7 @@
     <value>12, 368</value>
   </data>
   <data name="gbResultados.Size" type="System.Drawing.Size, System.Drawing">
-    <value>546, 466</value>
+    <value>558, 466</value>
   </data>
   <data name="gbResultados.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
