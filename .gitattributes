@@ -1,1 +1,2 @@
 Entregables/*.mp4 filter=lfs diff=lfs merge=lfs -text
+Entregables/*.zip filter=lfs diff=lfs merge=lfs -text
