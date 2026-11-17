@@ -1,6 +1,5 @@
 using System.Text.Json;
 using Microsoft.Data.Sqlite;
-using MiniProyecto_SPAF_Apache.Dominio;
 
 namespace MiniProyecto_SPAF_Apache.Principal;
 
@@ -33,24 +32,4 @@ internal static class IntegracionPersistencia
             columna.SortMode = DataGridViewColumnSortMode.NotSortable;
     }
 
-    public static void MostrarPaquetes(DataGridView tabla, IReadOnlyList<Paquete> paquetes)
-    {
-        tabla.Rows.Clear();
-        foreach (Paquete p in paquetes)
-            tabla.Rows.Add(p.Codigo, p.Cliente, p.Zona, p.Peso, p.ValorDeclarado, p.Total);
-    }
-
-    public static void MostrarDetalle(GroupBox panel, Paquete? p)
-    {
-        string[] nombres = ["lCodigo", "lCliente", "lZona", "lPeso", "lValorDeclarado", "lSubtotalPeso",
-            "lRecargoZona", "lPenalizacion", "lSeguro", "lCostoFijo", "lIva", "lTotalPaquete"];
-        object?[] valores = [p?.Codigo,p?.Cliente,p?.Zona,p?.Peso,p?.ValorDeclarado,p?.SubtotalPeso,
-            p?.RecargoZona,p?.PenalizacionPeso,p?.Seguro,p?.CostoFijo,p?.Iva,p?.Total];
-        for (int i = 0; i < nombres.Length; i++)
-        {
-            var etiqueta = (Label)panel.Controls[nombres[i]]!;
-            etiqueta.Tag ??= etiqueta.Text.Split(':')[0];
-            etiqueta.Text = etiqueta.Tag + ": " + (valores[i]?.ToString() ?? "—");
-        }
-    }
 }

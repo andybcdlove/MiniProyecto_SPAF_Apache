@@ -1,65 +1,91 @@
 using MiniProyecto_SPAF_Apache.Dominio;
 using MiniProyecto_SPAF_Apache.Servicios.Persistencia;
 
-namespace MiniProyecto_SPAF_Apache.Principal;
-
-public partial class FrmHistorial
+namespace MiniProyecto_SPAF_Apache.Principal
 {
-    private RepositorioEnvios _repositorio = new();
-    private Lote[] _lotes = [];
-    private Lote? _seleccionado;
-
-    private void ConectarPersistencia()
+    public partial class FrmHistorial
     {
-        IntegracionPersistencia.PrepararTabla(dataGridView1);
-        IntegracionPersistencia.PrepararTabla(dgvPaquetes);
-        Shown += (_, _) => CargarHistorial();
-        bActualizar.Click += (_, _) => CargarHistorial();
-        var recepciones = new Button
+        private RepositorioEnvios _repositorio = new RepositorioEnvios();
+        private Button bRecepciones = new Button();
+        private Button bSalir = null!;
+
+        private void ConectarPersistencia()
         {
-            Name = "bRecepciones", Text = "Recepciones", AutoSize = true,
-            Location = new Point(bActualizar.Right + 20, bActualizar.Top), Height = bActualizar.Height,
-            BackColor = bActualizar.BackColor, ForeColor = bActualizar.ForeColor,
-            Font = bActualizar.Font, FlatStyle = bActualizar.FlatStyle,
-            UseVisualStyleBackColor = false
-        };
-        Controls.Add(recepciones);
-        recepciones.Click += (_, _) =>
+            //prepara las tablas
+            IntegracionPersistencia.PrepararTabla(dataGridView1);
+            IntegracionPersistencia.PrepararTabla(dgvPaquetes);
+
+            //agrega el boton de recepciones
+            bRecepciones.Name = "bRecepciones";
+            bRecepciones.Text = "Recepciones";
+            bRecepciones.AutoSize = true;
+            bRecepciones.Location = new Point(
+                bActualizar.Right + 20, bActualizar.Top);
+            bRecepciones.Height = bActualizar.Height;
+            bRecepciones.BackColor = bActualizar.BackColor;
+            bRecepciones.ForeColor = bActualizar.ForeColor;
+            bRecepciones.Font = bActualizar.Font;
+            bRecepciones.FlatStyle = bActualizar.FlatStyle;
+            bRecepciones.UseVisualStyleBackColor = false;
+
+            Controls.Add(bRecepciones);
+
+            //conserva el regreso y agrega la salida
+            bSalir = NavegacionFormularios.CrearBotonSalir(bCerrar);
+            bSalir.Location = new Point(bCerrar.Left - bSalir.Width - 16, bCerrar.Top);
+            Controls.Add(bSalir);
+
+            bRecepciones.Click += bRecepciones_Click;
+            cbIdioma.SelectedIndexChanged += ActualizarIdiomaRecepciones;
+            ActualizarIdiomaRecepciones(this, EventArgs.Empty);
+        }
+
+        private void ActualizarIdiomaRecepciones(object? sender, EventArgs e)
         {
-            if (_seleccionado?.Id == null)
+            //actualiza el texto del boton
+            if (cbIdioma.SelectedIndex == 1)
             {
-                MessageBox.Show(this, "Selecciona primero un lote guardado.");
+                bRecepciones.Text = "Receptions";
+                bCerrar.Text = "Back";
+                bSalir.Text = "Exit";
+            }
+            else
+            {
+                bRecepciones.Text = "Recepciones";
+                bCerrar.Text = "Regresar";
+                bSalir.Text = "Salir";
+            }
+        }
+
+        private void bRecepciones_Click(object? sender, EventArgs e)
+        {
+            //obtiene el lote seleccionado
+            Lote? lote = null;
+
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                lote = dataGridView1.SelectedRows[0].Tag as Lote;
+            }
+
+            if (lote == null || lote.Id == null)
+            {
+                string mensaje = "Selecciona primero un lote guardado.";
+
+                if (cbIdioma.SelectedIndex == 1)
+                {
+                    mensaje = "Select a saved batch first.";
+                }
+
+                MessageBox.Show(this, mensaje);
                 return;
             }
-            using var ventana = new FrmRecepciones(_repositorio, _seleccionado);
-            ventana.ShowDialog(this);
-        };
-        dataGridView1.SelectionChanged += (_, _) => SeleccionarLote();
-        dgvPaquetes.SelectionChanged += (_, _) =>
-        {
-            int indice = dgvPaquetes.CurrentRow?.Index ?? -1;
-            IntegracionPersistencia.MostrarDetalle(gbDetalle,
-                _seleccionado != null && indice >= 0 && indice < _seleccionado.Paquetes.Count
-                    ? _seleccionado.Paquetes[indice] : null);
-        };
-    }
 
-    private void CargarHistorial() => IntegracionPersistencia.Ejecutar(this, cbIdioma.SelectedIndex == 1, () =>
-    {
-        Lote[] recuperados = _repositorio.ObtenerLotes();
-        _lotes = [];
-        dataGridView1.Rows.Clear();
-        _lotes = recuperados;
-        foreach (Lote lote in _lotes)
-            dataGridView1.Rows.Add(lote.Id!.Value, lote.FechaProcesamiento, lote.CantidadValidos, lote.Total);
-        SeleccionarLote();
-    });
-
-    private void SeleccionarLote()
-    {
-        int indice = dataGridView1.CurrentRow?.Index ?? -1;
-        _seleccionado = indice >= 0 && indice < _lotes.Length ? _lotes[indice] : null;
-        IntegracionPersistencia.MostrarPaquetes(dgvPaquetes, _seleccionado?.Paquetes ?? Array.Empty<Paquete>());
-        if (_seleccionado == null) IntegracionPersistencia.MostrarDetalle(gbDetalle,null);
+            //abre las recepciones del lote
+            using (FrmRecepciones ventana =
+                new FrmRecepciones(_repositorio, lote, cbIdioma.SelectedIndex == 1))
+            {
+                NavegacionFormularios.Abrir(this, ventana);
+            }
+        }
     }
 }

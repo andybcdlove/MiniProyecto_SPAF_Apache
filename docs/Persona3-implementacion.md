@@ -57,7 +57,7 @@ dotnet run --project PruebasPersistencia --no-restore -- interfaz .pruebas/inter
 
 Las dos órdenes ejecutan procesos distintos. Comprueban siete paquetes (ampliación del arreglo), errores, fecha, todos los importes y precisión, recuperación, rechazo de un lote recuperado, CSV mediante un lector independiente con comas, comillas, acentos y saltos de línea, ruta inválida y rollback mediante un trigger que falla al insertar el desglose. No dependen de formularios ni de la calculadora.
 
-La tercera orden comprueba controles reales de WinForms en un hilo STA, sin mostrar ventanas: procesamiento con calculadora y JSON, tablas de válidos/errores, guardado, prevención de duplicados y selección del lote en historial. No automatiza SaveFileDialog ni verifica visualmente el diseño.
+La tercera orden se actualizó durante la integración final. Ahora prueba los eventos vigentes, configuraciones inválidas, guardado, historial, recepciones y cancelación de SaveFileDialog. Abre y cierra automáticamente los diálogos de la prueba. El alcance actual está en [Verificacion-integracion.md](Verificacion-integracion.md).
 
 También verifica la tabla de la nueva ventana de recepciones. Las tres modalidades pasaron en el equipo de desarrollo. La compilación/publicación mostró NU1900 al consultar por red los datos de vulnerabilidades de NuGet; no hubo errores de compilación ni fallos de las pruebas. La auditoría de paquetes por red no quedó validada.
 

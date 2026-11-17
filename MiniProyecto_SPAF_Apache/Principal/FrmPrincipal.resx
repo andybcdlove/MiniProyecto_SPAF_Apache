@@ -117,34 +117,1383 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="lTitulo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lTitulo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 21.75pt, style=Italic</value>
+  </data>
+  <data name="lTitulo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 8</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lTitulo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="lTitulo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1123, 47</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lTitulo.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lTitulo.Text" xml:space="preserve">
+    <value>Paqueteria</value>
+  </data>
+  <data name="lTitulo.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;lTitulo.Name" xml:space="preserve">
+    <value>lTitulo</value>
+  </data>
+  <data name="&gt;&gt;lTitulo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lTitulo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lTitulo.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <metadata name="lIdioma.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="lIdioma.Location" type="System.Drawing.Point, System.Drawing">
+    <value>876, 8</value>
+  </data>
+  <data name="lIdioma.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="lIdioma.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 47</value>
+  </data>
+  <data name="lIdioma.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lIdioma.Text" xml:space="preserve">
+    <value>Idioma</value>
+  </data>
+  <data name="lIdioma.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;lIdioma.Name" xml:space="preserve">
+    <value>lIdioma</value>
+  </data>
+  <data name="&gt;&gt;lIdioma.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lIdioma.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lIdioma.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <metadata name="cbIdioma.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="cbIdioma.Items" xml:space="preserve">
+    <value>Español</value>
+  </data>
+  <data name="cbIdioma.Items1" xml:space="preserve">
+    <value>Inglés</value>
+  </data>
+  <data name="cbIdioma.Location" type="System.Drawing.Point, System.Drawing">
+    <value>965, 18</value>
+  </data>
+  <data name="cbIdioma.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="cbIdioma.Size" type="System.Drawing.Size, System.Drawing">
+    <value>102, 29</value>
+  </data>
+  <data name="cbIdioma.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cbIdioma.Name" xml:space="preserve">
+    <value>cbIdioma</value>
+  </data>
+  <data name="&gt;&gt;cbIdioma.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbIdioma.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cbIdioma.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <metadata name="gbCaptura.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="lFormato.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="lFormato.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lFormato.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 12pt</value>
+  </data>
+  <data name="lFormato.Location" type="System.Drawing.Point, System.Drawing">
+    <value>279, 32</value>
+  </data>
+  <data name="lFormato.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="lFormato.Size" type="System.Drawing.Size, System.Drawing">
+    <value>340, 21</value>
+  </data>
+  <data name="lFormato.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="lFormato.Text" xml:space="preserve">
+    <value>Código;Cliente;Zona;Peso;Valor declarado</value>
+  </data>
+  <data name="&gt;&gt;lFormato.Name" xml:space="preserve">
+    <value>lFormato</value>
+  </data>
+  <data name="&gt;&gt;lFormato.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lFormato.Parent" xml:space="preserve">
+    <value>gbCaptura</value>
+  </data>
+  <data name="&gt;&gt;lFormato.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="bLimpiar.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="bLimpiar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 12pt, style=Bold</value>
+  </data>
+  <data name="bLimpiar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>939, 185</value>
+  </data>
+  <data name="bLimpiar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="bLimpiar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 32</value>
+  </data>
+  <data name="bLimpiar.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="bLimpiar.Text" xml:space="preserve">
+    <value>Limpiar</value>
+  </data>
+  <data name="&gt;&gt;bLimpiar.Name" xml:space="preserve">
+    <value>bLimpiar</value>
+  </data>
+  <data name="&gt;&gt;bLimpiar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bLimpiar.Parent" xml:space="preserve">
+    <value>gbCaptura</value>
+  </data>
+  <data name="&gt;&gt;bLimpiar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="bProcesar.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="bProcesar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 12pt, style=Bold</value>
+  </data>
+  <data name="bProcesar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 185</value>
+  </data>
+  <data name="bProcesar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="bProcesar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>158, 32</value>
+  </data>
+  <data name="bProcesar.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="bProcesar.Text" xml:space="preserve">
+    <value>Procesar Lote</value>
+  </data>
+  <data name="&gt;&gt;bProcesar.Name" xml:space="preserve">
+    <value>bProcesar</value>
+  </data>
+  <data name="&gt;&gt;bProcesar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bProcesar.Parent" xml:space="preserve">
+    <value>gbCaptura</value>
+  </data>
+  <data name="&gt;&gt;bProcesar.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="tLote.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="tLote.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 12pt</value>
+  </data>
+  <data name="tLote.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 63</value>
+  </data>
+  <data name="tLote.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="tLote.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tLote.ScrollBars" type="System.Windows.Forms.ScrollBars, System.Windows.Forms">
+    <value>Vertical</value>
+  </data>
+  <data name="tLote.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1045, 103</value>
+  </data>
+  <data name="tLote.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;tLote.Name" xml:space="preserve">
+    <value>tLote</value>
+  </data>
+  <data name="&gt;&gt;tLote.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tLote.Parent" xml:space="preserve">
+    <value>gbCaptura</value>
+  </data>
+  <data name="&gt;&gt;tLote.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="lInstruccion.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="lInstruccion.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lInstruccion.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 12pt</value>
+  </data>
+  <data name="lInstruccion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 32</value>
+  </data>
+  <data name="lInstruccion.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="lInstruccion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>237, 21</value>
+  </data>
+  <data name="lInstruccion.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lInstruccion.Text" xml:space="preserve">
+    <value>Escribe un paquete por línea:
+</value>
+  </data>
+  <data name="&gt;&gt;lInstruccion.Name" xml:space="preserve">
+    <value>lInstruccion</value>
+  </data>
+  <data name="&gt;&gt;lInstruccion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lInstruccion.Parent" xml:space="preserve">
+    <value>gbCaptura</value>
+  </data>
+  <data name="&gt;&gt;lInstruccion.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="gbCaptura.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 13pt, style=Bold</value>
+  </data>
+  <data name="gbCaptura.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 71</value>
+  </data>
+  <data name="gbCaptura.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="gbCaptura.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="gbCaptura.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1079, 236</value>
+  </data>
+  <data name="gbCaptura.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="gbCaptura.Text" xml:space="preserve">
+    <value>Captura de paquetes</value>
+  </data>
+  <data name="&gt;&gt;gbCaptura.Name" xml:space="preserve">
+    <value>gbCaptura</value>
+  </data>
+  <data name="&gt;&gt;gbCaptura.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbCaptura.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbCaptura.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <metadata name="gbResultados.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dgvPaquetes.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="dgvPaquetes.ColumnHeadersHeight" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
   <metadata name="cCodigo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="cCodigo.HeaderText" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="cCodigo.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
   <metadata name="cCliente.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="cCliente.HeaderText" xml:space="preserve">
+    <value>Cliente</value>
+  </data>
+  <data name="cCliente.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
   <metadata name="cZona.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="cZona.HeaderText" xml:space="preserve">
+    <value>Zona</value>
+  </data>
+  <data name="cZona.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
   <metadata name="cPeso.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="cPeso.HeaderText" xml:space="preserve">
+    <value>Peso</value>
+  </data>
+  <data name="cPeso.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
   <metadata name="cValorDeclarado.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="cValorDeclarado.HeaderText" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="cValorDeclarado.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
   <metadata name="cTotal.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="cTotal.HeaderText" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="cTotal.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="dgvPaquetes.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="dgvPaquetes.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 25</value>
+  </data>
+  <data name="dgvPaquetes.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="dgvPaquetes.Size" type="System.Drawing.Size, System.Drawing">
+    <value>576, 397</value>
+  </data>
+  <data name="dgvPaquetes.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dgvPaquetes.Name" xml:space="preserve">
+    <value>dgvPaquetes</value>
+  </data>
+  <data name="&gt;&gt;dgvPaquetes.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvPaquetes.Parent" xml:space="preserve">
+    <value>gbResultados</value>
+  </data>
+  <data name="&gt;&gt;dgvPaquetes.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="gbResultados.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 13pt, style=Bold</value>
+  </data>
+  <data name="gbResultados.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 336</value>
+  </data>
+  <data name="gbResultados.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="gbResultados.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="gbResultados.Size" type="System.Drawing.Size, System.Drawing">
+    <value>580, 425</value>
+  </data>
+  <data name="gbResultados.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="gbResultados.Text" xml:space="preserve">
+    <value>Paquetes procesados</value>
+  </data>
+  <data name="&gt;&gt;gbResultados.Name" xml:space="preserve">
+    <value>gbResultados</value>
+  </data>
+  <data name="&gt;&gt;gbResultados.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbResultados.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbResultados.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <metadata name="gbDetalle.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="label1.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 175</value>
+  </data>
+  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>455, 9</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>gbDetalle</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="lTotalPaquete.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="lTotalPaquete.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lTotalPaquete.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 12pt, style=Bold</value>
+  </data>
+  <data name="lTotalPaquete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 387</value>
+  </data>
+  <data name="lTotalPaquete.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="lTotalPaquete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>169, 19</value>
+  </data>
+  <data name="lTotalPaquete.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="lTotalPaquete.Text" xml:space="preserve">
+    <value>Total del paquete: —</value>
+  </data>
+  <data name="&gt;&gt;lTotalPaquete.Name" xml:space="preserve">
+    <value>lTotalPaquete</value>
+  </data>
+  <data name="&gt;&gt;lTotalPaquete.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lTotalPaquete.Parent" xml:space="preserve">
+    <value>gbDetalle</value>
+  </data>
+  <data name="&gt;&gt;lTotalPaquete.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="lIva.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="lIva.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lIva.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 12pt</value>
+  </data>
+  <data name="lIva.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 356</value>
+  </data>
+  <data name="lIva.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="lIva.Size" type="System.Drawing.Size, System.Drawing">
+    <value>63, 21</value>
+  </data>
+  <data name="lIva.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="lIva.Text" xml:space="preserve">
+    <value>IVA: —</value>
+  </data>
+  <data name="&gt;&gt;lIva.Name" xml:space="preserve">
+    <value>lIva</value>
+  </data>
+  <data name="&gt;&gt;lIva.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lIva.Parent" xml:space="preserve">
+    <value>gbDetalle</value>
+  </data>
+  <data name="&gt;&gt;lIva.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="lCostoFijo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="lCostoFijo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lCostoFijo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 12pt</value>
+  </data>
+  <data name="lCostoFijo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 327</value>
+  </data>
+  <data name="lCostoFijo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="lCostoFijo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 21</value>
+  </data>
+  <data name="lCostoFijo.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="lCostoFijo.Text" xml:space="preserve">
+    <value>	Costo fijo: —</value>
+  </data>
+  <data name="&gt;&gt;lCostoFijo.Name" xml:space="preserve">
+    <value>lCostoFijo</value>
+  </data>
+  <data name="&gt;&gt;lCostoFijo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lCostoFijo.Parent" xml:space="preserve">
+    <value>gbDetalle</value>
+  </data>
+  <data name="&gt;&gt;lCostoFijo.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="lSeguro.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="lSeguro.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lSeguro.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 12pt</value>
+  </data>
+  <data name="lSeguro.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 296</value>
+  </data>
+  <data name="lSeguro.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="lSeguro.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 21</value>
+  </data>
+  <data name="lSeguro.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="lSeguro.Text" xml:space="preserve">
+    <value>Seguro: —</value>
+  </data>
+  <data name="&gt;&gt;lSeguro.Name" xml:space="preserve">
+    <value>lSeguro</value>
+  </data>
+  <data name="&gt;&gt;lSeguro.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lSeguro.Parent" xml:space="preserve">
+    <value>gbDetalle</value>
+  </data>
+  <data name="&gt;&gt;lSeguro.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <metadata name="lRecargoZona.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="lRecargoZona.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lRecargoZona.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 12pt</value>
+  </data>
+  <data name="lRecargoZona.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 231</value>
+  </data>
+  <data name="lRecargoZona.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="lRecargoZona.Size" type="System.Drawing.Size, System.Drawing">
+    <value>173, 21</value>
+  </data>
+  <data name="lRecargoZona.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="lRecargoZona.Text" xml:space="preserve">
+    <value>Recargo por zona: —</value>
+  </data>
+  <data name="&gt;&gt;lRecargoZona.Name" xml:space="preserve">
+    <value>lRecargoZona</value>
+  </data>
+  <data name="&gt;&gt;lRecargoZona.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lRecargoZona.Parent" xml:space="preserve">
+    <value>gbDetalle</value>
+  </data>
+  <data name="&gt;&gt;lRecargoZona.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <metadata name="lSubtotalPeso.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="lSubtotalPeso.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lSubtotalPeso.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 12pt</value>
+  </data>
+  <data name="lSubtotalPeso.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 198</value>
+  </data>
+  <data name="lSubtotalPeso.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="lSubtotalPeso.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 21</value>
+  </data>
+  <data name="lSubtotalPeso.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lSubtotalPeso.Text" xml:space="preserve">
+    <value>Subtotal por peso: —</value>
+  </data>
+  <data name="&gt;&gt;lSubtotalPeso.Name" xml:space="preserve">
+    <value>lSubtotalPeso</value>
+  </data>
+  <data name="&gt;&gt;lSubtotalPeso.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lSubtotalPeso.Parent" xml:space="preserve">
+    <value>gbDetalle</value>
+  </data>
+  <data name="&gt;&gt;lSubtotalPeso.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <metadata name="lPenalizacion.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="lPenalizacion.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lPenalizacion.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 12pt</value>
+  </data>
+  <data name="lPenalizacion.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 264</value>
+  </data>
+  <data name="lPenalizacion.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="lPenalizacion.Size" type="System.Drawing.Size, System.Drawing">
+    <value>202, 21</value>
+  </data>
+  <data name="lPenalizacion.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lPenalizacion.Text" xml:space="preserve">
+    <value>Penalización por peso: —</value>
+  </data>
+  <data name="&gt;&gt;lPenalizacion.Name" xml:space="preserve">
+    <value>lPenalizacion</value>
+  </data>
+  <data name="&gt;&gt;lPenalizacion.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lPenalizacion.Parent" xml:space="preserve">
+    <value>gbDetalle</value>
+  </data>
+  <data name="&gt;&gt;lPenalizacion.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <metadata name="lValorDeclarado.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="lValorDeclarado.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lValorDeclarado.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 12pt</value>
+  </data>
+  <data name="lValorDeclarado.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 140</value>
+  </data>
+  <data name="lValorDeclarado.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="lValorDeclarado.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 21</value>
+  </data>
+  <data name="lValorDeclarado.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lValorDeclarado.Text" xml:space="preserve">
+    <value>Valor declarado: —</value>
+  </data>
+  <data name="&gt;&gt;lValorDeclarado.Name" xml:space="preserve">
+    <value>lValorDeclarado</value>
+  </data>
+  <data name="&gt;&gt;lValorDeclarado.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lValorDeclarado.Parent" xml:space="preserve">
+    <value>gbDetalle</value>
+  </data>
+  <data name="&gt;&gt;lValorDeclarado.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <metadata name="lPeso.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="lPeso.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lPeso.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 12pt</value>
+  </data>
+  <data name="lPeso.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 111</value>
+  </data>
+  <data name="lPeso.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="lPeso.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 21</value>
+  </data>
+  <data name="lPeso.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="lPeso.Text" xml:space="preserve">
+    <value>Peso (kg): —</value>
+  </data>
+  <data name="&gt;&gt;lPeso.Name" xml:space="preserve">
+    <value>lPeso</value>
+  </data>
+  <data name="&gt;&gt;lPeso.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lPeso.Parent" xml:space="preserve">
+    <value>gbDetalle</value>
+  </data>
+  <data name="&gt;&gt;lPeso.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <metadata name="lZona.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="lZona.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lZona.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 12pt</value>
+  </data>
+  <data name="lZona.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 81</value>
+  </data>
+  <data name="lZona.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="lZona.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 21</value>
+  </data>
+  <data name="lZona.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="lZona.Text" xml:space="preserve">
+    <value>Zona: —</value>
+  </data>
+  <data name="&gt;&gt;lZona.Name" xml:space="preserve">
+    <value>lZona</value>
+  </data>
+  <data name="&gt;&gt;lZona.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lZona.Parent" xml:space="preserve">
+    <value>gbDetalle</value>
+  </data>
+  <data name="&gt;&gt;lZona.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <metadata name="lCliente.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="lCliente.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lCliente.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 12pt</value>
+  </data>
+  <data name="lCliente.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 51</value>
+  </data>
+  <data name="lCliente.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="lCliente.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 21</value>
+  </data>
+  <data name="lCliente.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lCliente.Text" xml:space="preserve">
+    <value>Cliente: —</value>
+  </data>
+  <data name="&gt;&gt;lCliente.Name" xml:space="preserve">
+    <value>lCliente</value>
+  </data>
+  <data name="&gt;&gt;lCliente.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lCliente.Parent" xml:space="preserve">
+    <value>gbDetalle</value>
+  </data>
+  <data name="&gt;&gt;lCliente.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <metadata name="lCodigo.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="lCodigo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lCodigo.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 12pt</value>
+  </data>
+  <data name="lCodigo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 23</value>
+  </data>
+  <data name="lCodigo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="lCodigo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 21</value>
+  </data>
+  <data name="lCodigo.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lCodigo.Text" xml:space="preserve">
+    <value>Código: —</value>
+  </data>
+  <data name="&gt;&gt;lCodigo.Name" xml:space="preserve">
+    <value>lCodigo</value>
+  </data>
+  <data name="&gt;&gt;lCodigo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lCodigo.Parent" xml:space="preserve">
+    <value>gbDetalle</value>
+  </data>
+  <data name="&gt;&gt;lCodigo.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="gbDetalle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 13pt, style=Bold</value>
+  </data>
+  <data name="gbDetalle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>634, 336</value>
+  </data>
+  <data name="gbDetalle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="gbDetalle.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="gbDetalle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>455, 425</value>
+  </data>
+  <data name="gbDetalle.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="gbDetalle.Text" xml:space="preserve">
+    <value>Detalle del paquete</value>
+  </data>
+  <data name="&gt;&gt;gbDetalle.Name" xml:space="preserve">
+    <value>gbDetalle</value>
+  </data>
+  <data name="&gt;&gt;gbDetalle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbDetalle.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbDetalle.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <metadata name="gbErrores.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="dgvErrores.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="cLinea.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="cLinea.HeaderText" xml:space="preserve">
+    <value>Linea</value>
+  </data>
+  <data name="cLinea.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
   <metadata name="cTextoOriginal.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="cTextoOriginal.HeaderText" xml:space="preserve">
+    <value>Texto Original</value>
+  </data>
+  <data name="cTextoOriginal.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
   <metadata name="cMotivo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="cMotivo.HeaderText" xml:space="preserve">
+    <value>Motivo del Error</value>
+  </data>
+  <data name="cMotivo.MinimumWidth" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="dgvErrores.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="dgvErrores.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 25</value>
+  </data>
+  <data name="dgvErrores.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="dgvErrores.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="dgvErrores.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1075, 199</value>
+  </data>
+  <data name="dgvErrores.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;dgvErrores.Name" xml:space="preserve">
+    <value>dgvErrores</value>
+  </data>
+  <data name="&gt;&gt;dgvErrores.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dgvErrores.Parent" xml:space="preserve">
+    <value>gbErrores</value>
+  </data>
+  <data name="&gt;&gt;dgvErrores.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="gbErrores.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 13pt, style=Bold</value>
+  </data>
+  <data name="gbErrores.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 780</value>
+  </data>
+  <data name="gbErrores.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="gbErrores.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="gbErrores.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1079, 227</value>
+  </data>
+  <data name="gbErrores.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="gbErrores.Text" xml:space="preserve">
+    <value>Errores del lote</value>
+  </data>
+  <data name="&gt;&gt;gbErrores.Name" xml:space="preserve">
+    <value>gbErrores</value>
+  </data>
+  <data name="&gt;&gt;gbErrores.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbErrores.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gbErrores.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <metadata name="label2.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>-3, 1024</value>
+  </data>
+  <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1117, 37</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <metadata name="lValidos.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="lValidos.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 12pt</value>
+  </data>
+  <data name="lValidos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 1024</value>
+  </data>
+  <data name="lValidos.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="lValidos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>417, 37</value>
+  </data>
+  <data name="lValidos.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="lValidos.Text" xml:space="preserve">
+    <value>Paquetes válidos: 0</value>
+  </data>
+  <data name="lValidos.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lValidos.Name" xml:space="preserve">
+    <value>lValidos</value>
+  </data>
+  <data name="&gt;&gt;lValidos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lValidos.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lValidos.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <metadata name="lInvalidos.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="lInvalidos.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 12pt</value>
+  </data>
+  <data name="lInvalidos.Location" type="System.Drawing.Point, System.Drawing">
+    <value>307, 1024</value>
+  </data>
+  <data name="lInvalidos.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="lInvalidos.Size" type="System.Drawing.Size, System.Drawing">
+    <value>417, 37</value>
+  </data>
+  <data name="lInvalidos.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="lInvalidos.Text" xml:space="preserve">
+    <value>Paquetes inválidos: 0</value>
+  </data>
+  <data name="lInvalidos.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lInvalidos.Name" xml:space="preserve">
+    <value>lInvalidos</value>
+  </data>
+  <data name="&gt;&gt;lInvalidos.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lInvalidos.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lInvalidos.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <metadata name="lTotalLote.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="lTotalLote.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 12pt, style=Bold</value>
+  </data>
+  <data name="lTotalLote.Location" type="System.Drawing.Point, System.Drawing">
+    <value>617, 1024</value>
+  </data>
+  <data name="lTotalLote.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="lTotalLote.Size" type="System.Drawing.Size, System.Drawing">
+    <value>417, 37</value>
+  </data>
+  <data name="lTotalLote.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="lTotalLote.Text" xml:space="preserve">
+    <value>Total del lote: $0.00</value>
+  </data>
+  <data name="lTotalLote.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="&gt;&gt;lTotalLote.Name" xml:space="preserve">
+    <value>lTotalLote</value>
+  </data>
+  <data name="&gt;&gt;lTotalLote.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lTotalLote.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lTotalLote.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <metadata name="bGuardar.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="bGuardar.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="bGuardar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 13pt, style=Bold</value>
+  </data>
+  <data name="bGuardar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 1074</value>
+  </data>
+  <data name="bGuardar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="bGuardar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>112, 34</value>
+  </data>
+  <data name="bGuardar.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="bGuardar.Text" xml:space="preserve">
+    <value>Guardar Lote</value>
+  </data>
+  <data name="&gt;&gt;bGuardar.Name" xml:space="preserve">
+    <value>bGuardar</value>
+  </data>
+  <data name="&gt;&gt;bGuardar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bGuardar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;bGuardar.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="bExportar.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="bExportar.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="bExportar.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 13pt, style=Bold</value>
+  </data>
+  <data name="bExportar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>499, 1074</value>
+  </data>
+  <data name="bExportar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="bExportar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 34</value>
+  </data>
+  <data name="bExportar.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="bExportar.Text" xml:space="preserve">
+    <value>Exportar</value>
+  </data>
+  <data name="&gt;&gt;bExportar.Name" xml:space="preserve">
+    <value>bExportar</value>
+  </data>
+  <data name="&gt;&gt;bExportar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bExportar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;bExportar.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="bHistorial.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="bHistorial.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 13pt, style=Bold</value>
+  </data>
+  <data name="bHistorial.Location" type="System.Drawing.Point, System.Drawing">
+    <value>935, 1074</value>
+  </data>
+  <data name="bHistorial.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 3, 2, 3</value>
+  </data>
+  <data name="bHistorial.Size" type="System.Drawing.Size, System.Drawing">
+    <value>154, 34</value>
+  </data>
+  <data name="bHistorial.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="bHistorial.Text" xml:space="preserve">
+    <value>Ver Historial</value>
+  </data>
+  <data name="&gt;&gt;bHistorial.Name" xml:space="preserve">
+    <value>bHistorial</value>
+  </data>
+  <data name="&gt;&gt;bHistorial.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;bHistorial.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;bHistorial.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="sfdExportar.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="sfdExportar.Filter" xml:space="preserve">
+    <value>Archivos CSV (*.csv)|*.csv</value>
+  </data>
+  <data name="sfdExportar.Title" xml:space="preserve">
+    <value>Guardar reporte del lote</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>10, 21</value>
+  </data>
+  <data name="$this.AutoScroll" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.AutoScrollMinSize" type="System.Drawing.Size, System.Drawing">
+    <value>0, 1150</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1117, 786</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Century Gothic, 12pt</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 4, 3, 4</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Procesamiento de envíos</value>
+  </data>
+  <data name="&gt;&gt;cCodigo.Name" xml:space="preserve">
+    <value>cCodigo</value>
+  </data>
+  <data name="&gt;&gt;cCodigo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cCliente.Name" xml:space="preserve">
+    <value>cCliente</value>
+  </data>
+  <data name="&gt;&gt;cCliente.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cZona.Name" xml:space="preserve">
+    <value>cZona</value>
+  </data>
+  <data name="&gt;&gt;cZona.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cPeso.Name" xml:space="preserve">
+    <value>cPeso</value>
+  </data>
+  <data name="&gt;&gt;cPeso.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cValorDeclarado.Name" xml:space="preserve">
+    <value>cValorDeclarado</value>
+  </data>
+  <data name="&gt;&gt;cValorDeclarado.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cTotal.Name" xml:space="preserve">
+    <value>cTotal</value>
+  </data>
+  <data name="&gt;&gt;cTotal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cLinea.Name" xml:space="preserve">
+    <value>cLinea</value>
+  </data>
+  <data name="&gt;&gt;cLinea.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cTextoOriginal.Name" xml:space="preserve">
+    <value>cTextoOriginal</value>
+  </data>
+  <data name="&gt;&gt;cTextoOriginal.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cMotivo.Name" xml:space="preserve">
+    <value>cMotivo</value>
+  </data>
+  <data name="&gt;&gt;cMotivo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sfdExportar.Name" xml:space="preserve">
+    <value>sfdExportar</value>
+  </data>
+  <data name="&gt;&gt;sfdExportar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FrmPrincipal</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

@@ -111,51 +111,9 @@ else if (modo == "recuperar")
 }
 else if (modo == "interfaz")
 {
-    Comprobar(!File.Exists(ruta), "Usar carpeta nueva para la prueba de interfaz.");
-    Exception? fallo = null;
-    var hilo = new Thread(() =>
-    {
-        try
-        {
-            const System.Reflection.BindingFlags privados = System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic;
-            T Campo<T>(object objeto, string nombre) => (T)objeto.GetType().GetField(nombre, privados)!.GetValue(objeto)!;
-            void Invocar(object objeto, string nombre, params object?[] parametros) =>
-                objeto.GetType().GetMethod(nombre, privados)!.Invoke(objeto, parametros);
-            using var principal = new MiniProyecto_SPAF_Apache.FrmPrincipal(repositorio);
-            Campo<TextBox>(principal, "tLote").Text = "PACK-001;Ana;Zona A;12.5;150\r\nPACK-002;Luis;Zona C;25;1500\r\nPACK-003;Error;Zona B;-1;50";
-            Invocar(principal, "ProcesarLote", null, EventArgs.Empty);
-            var tabla = Campo<DataGridView>(principal, "dgvPaquetes");
-            Comprobar(tabla.Rows.Count == 2 && Campo<DataGridView>(principal,"dgvErrores").Rows.Count == 1,
-                "Las tablas no muestran el procesamiento");
-            Comprobar(Campo<Button>(principal,"bGuardar").Enabled, "Guardar no se habilitó");
-            Invocar(principal,"GuardarLoteActual");
-            Comprobar(!Campo<Button>(principal,"bGuardar").Enabled, "Guardar no se deshabilitó");
-            Invocar(principal,"GuardarLoteActual");
-            Comprobar(repositorio.ObtenerLotes().Length == 1, "La interfaz permitió duplicar el guardado");
-            using var historial = new MiniProyecto_SPAF_Apache.Principal.FrmHistorial(repositorio);
-            Invocar(historial,"CargarHistorial");
-            var lotes = Campo<DataGridView>(historial,"dataGridView1");
-            Comprobar(lotes.Rows.Count == 1, "El historial no cargó el lote");
-            lotes.CurrentCell = lotes.Rows[0].Cells[0];
-            Invocar(historial,"SeleccionarLote");
-            Comprobar(Campo<DataGridView>(historial,"dgvPaquetes").Rows.Count == 2,
-                "El historial no muestra los paquetes");
-            Comprobar(repositorio.ObtenerLotes()[0].Total == 659.75m, "Total financiero inesperado");
-            Lote recuperado = repositorio.ObtenerLotes()[0];
-            repositorio.RegistrarRecepcion(recuperado.Id!.Value, 0, "Dana");
-            using var recepciones = new MiniProyecto_SPAF_Apache.Principal.FrmRecepciones(repositorio, recuperado);
-            Invocar(recepciones, "Actualizar");
-            Comprobar(Campo<DataGridView>(recepciones,"_tabla").Rows.Count == 1,
-                "La ventana de recepciones no muestra el registro");
-        }
-        catch (Exception error) { fallo = error; }
-    });
-    hilo.SetApartmentState(ApartmentState.STA);
-    hilo.Start();
-    hilo.Join();
-    if (fallo != null) throw new Exception("Falló la integración WinForms", fallo);
-    Console.WriteLine("OK: controles WinForms, procesamiento, guardado único e historial.");
+    PruebasFinales.Ejecutar(carpeta);
 }
+
 else if (modo == "excel")
 {
     var p = new Paquete("PACK-004", "Samuel, \"Pérez\"\nSucursal norte", "Zona A", 14.5m, 120m)

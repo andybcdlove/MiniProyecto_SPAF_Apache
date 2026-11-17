@@ -1,8 +1,8 @@
-# MiniProyecto SPAF Apache — rama Dana
+# MiniProyecto SPAF Apache
 
 Aplicación WinForms en C# sobre .NET 10 para procesar lotes de envíos.
 
-## Trabajo de Dana: base de datos y exportación
+## Funciones integradas
 
 - SQLite: tablas Lotes, Paquetes, Desgloses, Errores y Recepciones.
 - Guardado transaccional con parámetros, historial y conservación de importes originales.
@@ -11,7 +11,9 @@ Aplicación WinForms en C# sobre .NET 10 para procesar lotes de envíos.
 - Integración de los botones de procesamiento, guardado, historial, recepción y exportación.
 - Pruebas con datos ficticios, script de publicación e instrucciones de instalación.
 
-Se incorporaron los modelos/procesamiento de Mike y las clases de configuración/cálculo de Andy. Sus aportes no se presentan como trabajo de Dana. Los archivos parciales de integración deben coordinarse con la persona responsable de interfaz e idiomas.
+Mike desarrolló los modelos y el procesamiento; Andrea, la estructura inicial, el repositorio, la configuración y los cálculos; Dana, la persistencia, exportación y preparación de instalación; Valentina, la conexión de la interfaz, los idiomas y el manual de usuario. Andrea coordina la revisión e integración final.
+
+La interfaz permite cambiar entre español e inglés. Al abrir Historial o Recepciones se oculta la pantalla anterior; Regresar la recupera y Salir cierra la aplicación.
 
 ## ¿Dónde está envios.db?
 
@@ -35,6 +37,6 @@ Pegar datos como `PACK-001;Ana;Zona A;12.5;150`, procesar y guardar. Cerrar y ab
 
 ## Verificación y entrega
 
-Las pruebas se ejecutan según [la documentación técnica](docs/Persona3-implementacion.md). `PrepararInstalacion.ps1` genera un ZIP autocontenido Windows x64 en artifacts; los binarios generados no se guardan en Git. Consultar [instalación](docs/INSTALACION.txt) y [prueba en otra computadora](docs/Verificacion-otra-computadora.md).
+Las pruebas actuales y sus resultados están en [Verificación de la integración](docs/Verificacion-integracion.md). El proyecto `PruebasPersistencia` es una herramienta de desarrollo y no forma parte de la aplicación distribuida. `PrepararInstalacion.ps1` genera un ZIP autocontenido Windows x64 en artifacts; los binarios generados no se guardan en Git. Consultar [instalación](docs/INSTALACION.txt) y [prueba en otra computadora](docs/Verificacion-otra-computadora.md).
 
-Las pruebas locales pasaron. La comprobación en otra computadora corresponde a un integrante del equipo y todavía no está confirmada. Recepción se interpretó como llegada de un paquete guardado; el equipo debe comunicar esta interpretación al profesor. La traducción completa de interfaz sigue a cargo de su responsable.
+La comprobación del paquete final en otra computadora todavía está pendiente. Los documentos Persona3 conservan el contexto y los aportes de Dana; no sustituyen el documento técnico conjunto ni describen todos los cambios posteriores de integración.
